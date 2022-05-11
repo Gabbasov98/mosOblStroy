@@ -1,0 +1,52 @@
+@import 'vars';
+html {
+    width: 100%;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: $font1;
+    background: #fff;
+    font-weight: 500;
+    color: $blue;
+    font-size: 16px;
+    &.fixed-body {
+        overflow-y: hidden;
+    }
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 60px;
+    @media screen and (max-width: 1840px) {
+        padding: 0 50px;
+    }
+    @media screen and (max-width: 1280px) {
+        padding: 0 40px;
+    }
+    @media screen and (max-width: 992px) {
+        padding: 0 30px;
+    }
+    @media screen and (max-width: 768px) {
+        padding: 0 15px;
+    }
+}
+
+a {
+    &:hover {
+        color: $orange;
+    }
+}

@@ -1,0 +1,190 @@
+@import "../vars";
+.adv-banners {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.adv-banner {
+    height: 26px;
+    width: 36px;
+    border: 2px solid $blue;
+    border-radius: 4px;
+    box-shadow: inset 0px 0.284448px 3.41338px rgba(0, 21, 34, 0.59);
+    font-weight: 600;
+    font-size: 11px;
+    position: relative;
+    &--medium {
+        width: 50px;
+    }
+    &--large {
+        width: 78px;
+    }
+    &:hover {
+        .adv-banner__detail {
+            opacity: 1;
+            pointer-events: unset;
+        }
+    }
+    &:not(:last-child) {
+        margin-right: 20px;
+    }
+    &__wrap {
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        position: relative;
+        svg {
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            transform: translate(-50%, 1px);
+        }
+    }
+    &__digital {
+        position: absolute;
+        border-radius: 8px;
+        background-color: $blue2;
+        height: 17px;
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        font-size: 11px;
+        padding: 0 6px;
+        z-index: 2;
+        bottom: 22px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #fff;
+    }
+    &__detail {
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-48.5%);
+        width: 430px;
+        z-index: 3;
+        padding-bottom: 26px;
+        background-image: url(../img/tooltip-bg.svg);
+        background-size: 100% 100%;
+        opacity: 0;
+        pointer-events: none;
+        transition: all .225s;
+        &-wrap {
+            display: flex;
+            padding: 20px 20px 20px 30px;
+            border-radius: 8px;
+        }
+    }
+    &__img {
+        width: 100px;
+        flex-shrink: 0;
+        margin-right: 20px;
+        img {
+            border-radius: 5px;
+            width: 100%;
+        }
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 135%;
+    }
+    &__desc {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 135%;
+        margin-top: 5px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .adv-banners {
+        position: relative;
+    }
+    .adv-banner {
+        position: static;
+        &__detail {
+            max-width: 100%;
+            background-image: unset;
+            transform: translateX(-50%);
+            &-wrap {
+                padding: 20px;
+                background: #fff;
+                box-shadow: 0px 4px 15px rgba(42, 58, 67, 0.1);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .adv-banner {
+        height: 17px;
+        width: 27px;
+        font-size: 9px;
+        &--medium {
+            width: 38px;
+        }
+        &--large {
+            width: 59px;
+        }
+        &__wrap {
+            svg {
+                width: 4px;
+                height: auto;
+            }
+        }
+        &__digital {
+            padding: 0 4px;
+            height: 13px;
+            font-size: 9px;
+            bottom: 13px;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .adv-banner {
+        height: 16px;
+        width: 27px;
+        font-size: 9px;
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+        &--medium {
+            width: 33px;
+        }
+        &--large {
+            width: 50px;
+        }
+        &__wrap {
+            svg {
+                width: 3.8px;
+            }
+        }
+        &__digital {
+            padding: 0 3px;
+        }
+        &__detail {
+            text-align: center;
+            &-wrap {
+                display: block;
+                padding: 12px;
+            }
+        }
+        &__img {
+            width: 90px;
+            margin: 0 auto;
+        }
+        &__title {
+            font-size: 14px;
+        }
+        &__desc {
+            font-size: 12px;
+        }
+    }
+}

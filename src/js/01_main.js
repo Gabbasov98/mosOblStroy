@@ -67,4 +67,10 @@ $(document).ready(function() {
     }
 
 
+    // var myMap = new ymaps.Map('map', {
+    //     center: [59.937, 30.313],
+    //     controls: ['rulerControl'],
+    //     zoom: 8
+    // });
+
 });

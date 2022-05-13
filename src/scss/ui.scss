@@ -2,39 +2,58 @@
 @import 'components/text.scss';
 @import 'components/button.scss';
 @import 'components/fonts.scss';
-.btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: inherit;
-    border-radius: 10px;
+@import 'components/filter.scss';
+@import 'components/adv-banners.scss';
+input {
+    color: $blue;
+    font-weight: 500;
+    &::placeholder {
+        color: rgba($blue, 0.5);
+    }
 }
 
 .form-group {
     position: relative;
     margin: 0;
-    margin-bottom: 30px;
     input {
-        border: none;
-        border-bottom: 1px solid #000000;
-        padding: 0 10px;
-        height: 47px;
+        border: 1px solid #E7ECEF;
+        border-radius: 13px;
+        background-color: #fff;
+        padding: 0 30px;
+        height: 65px;
         width: 100%;
-        font-size: 18px;
-        background-color: transparent;
-        color: #000;
+        font-weight: 400;
+        font-size: 16px;
+        color: $blue;
         &::placeholder {
-            color: #000;
+            color: $blue;
         }
         &:focus {
-            &::placeholder {
-                color: rgba(#000, 0.3);
-            }
+            border-color: $blue;
+            outline: none;
+        }
+    }
+    &__error {
+        display: none;
+        top: 100%;
+        margin-top: 10px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 110%;
+        color: $red;
+    }
+    &--error {
+        input {
+            border-color: $red !important;
+        }
+        .form-group__error {
+            display: block;
         }
     }
 }
 
-.check {
+.check,
+.radio {
     position: relative;
     input {
         position: absolute;
@@ -47,8 +66,7 @@
         cursor: pointer;
         &:checked+label {
             &::before {
-                // background-color: $green;
-                border: 3px solid #fff;
+                background-image: url(../img/check.svg);
             }
         }
         &:disabled+label {
@@ -57,25 +75,101 @@
         }
     }
     label {
-        padding-left: 40px;
+        padding-left: 43px;
         position: relative;
-        min-height: 20px;
-        font-size: 14px;
-        line-height: 20px;
+        min-height: 30px;
+        font-size: 16px;
+        line-height: 110%;
         cursor: pointer;
+        display: flex;
+        align-items: center;
         &:before {
             content: '';
             position: absolute;
             z-index: 1;
-            border-radius: 2px;
-            background: rgba(255, 255, 255, 0.01);
-            border: 1px solid rgba(255, 255, 255, 0.45);
-            width: 20px;
-            height: 20px;
+            border: 1px solid #E7ECEF;
+            border-radius: 8px;
+            width: 30px;
+            height: 30px;
             left: 0;
             top: 50%;
             transform: translateY(-50%);
-            transition: all .100s;
+            transition: all 0s;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 18px auto;
+        }
+    }
+}
+
+.rect {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    transform: rotate(-45deg);
+    background-color: $orange;
+    display: inline-block;
+}
+
+.breadcrums {
+    margin-top: 60px;
+    &__item {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 110%;
+        position: relative;
+        font-weight: 400;
+        &:last-child {
+            font-weight: 600;
+        }
+        &:not(:first-child) {
+            margin-left: 24px;
+            &:before {
+                content: '';
+                position: absolute;
+                z-index: 1;
+                width: 3.51px;
+                height: 3.51px;
+                background-color: $orange;
+                border-radius: 1px;
+                transform: rotate(-45deg) translateY(-50%);
+                top: 50%;
+                right: 100%;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .form-group {
+        input {
+            height: 57px;
+            padding: 0 25px;
+            font-size: 15px;
+        }
+        &__error {
+            margin-top: 2px;
+            font-size: 13px;
+        }
+    }
+    .breadcrums {
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .rect {
+        width: 8px;
+        height: 8px;
+        border-radius: 2px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .form-group {
+        input {
+            padding: 0 20px;
         }
     }
 }

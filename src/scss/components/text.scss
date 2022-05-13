@@ -1,1 +1,123 @@
 @import "../vars";
+.display1 {
+    font-weight: 600;
+    font-size: 96px;
+    line-height: 130%;
+    .rect {
+        transform: rotate(-45deg) translateY(-20px);
+    }
+}
+
+.display2 {
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 130%;
+}
+
+.display3 {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 110%;
+}
+
+.display4 {
+    font-size: 30px;
+    line-height: 140%;
+}
+
+p {
+    font-size: 18px;
+    line-height: 150%;
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 1850px) {
+    .display1 {
+        font-size: 83px;
+    }
+    .display2 {
+        font-size: 52px;
+    }
+    .display3 {
+        font-size: 44px;
+    }
+    .display4 {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .display1 {
+        font-size: 70px;
+        .rect {
+            transform: rotate(-45deg) translateY(-16px);
+        }
+    }
+    .display2 {
+        font-size: 40px;
+    }
+    .display3 {
+        font-size: 40px;
+    }
+    p {
+        font-size: 15px;
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .display1 {
+        font-size: 52px;
+        .rect {
+            transform: rotate(-45deg) translateY(-10px);
+        }
+    }
+    .display2 {
+        font-size: 36px;
+    }
+    .display3 {
+        font-size: 36px;
+    }
+    p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .display1 {
+        font-size: 40px;
+        line-height: 120%;
+        .rect {
+            transform: rotate(-45deg) translateY(-10px);
+        }
+    }
+    .display2 {
+        font-size: 24px;
+    }
+    .display3 {
+        font-size: 24px;
+        line-height: 120%;
+    }
+    .display4 {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .display1 {
+        font-size: 34px;
+    }
+    .display2 {
+        font-size: 20px;
+    }
+    .display4 {
+        font-size: 16px;
+    }
+    p {
+        font-size: 13px;
+    }
+}

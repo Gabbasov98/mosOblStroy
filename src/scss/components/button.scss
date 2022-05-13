@@ -5,7 +5,19 @@
     justify-content: center;
     transition: all ease-out .225s;
     padding: 0;
+    color: inherit;
+    border-radius: 10px;
+    font-size: 16px;
     &:focus {
         box-shadow: none;
+    }
+}
+
+.btn-orange {
+    background-color: $orange;
+    color: #FFFFFF;
+    &:hover {
+        background-color: $orange2;
+        color: #FFFFFF;
     }
 }

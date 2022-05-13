@@ -1,0 +1,79 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"Главная", "description":"", "keywords":"",})
+
+<body>
+    <div class="wrapper">
+        @@include('components/page-blocks/_header.html')
+        <main class="content">
+
+            <section class='breadcrums'>
+                <div class='container'>
+                    <div class='breadcrums__inner'>
+                        <a href="" class="breadcrums__item">Главная</a>
+                        <span class="breadcrums__item">Размещение рекламы</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class='config config-catalog'>
+                <div class='container'>
+                    <div class='config__top'>
+                        <div class="config-catalog__title display2">
+                            Каталог рекламных щитов
+                        </div>
+                    </div>
+
+                    <div class="config-filter__mob">
+                        <button class="config-filter__mob-btn btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21.2995 7.57969H15.7195C15.3295 7.57969 15.0195 7.26969 15.0195 6.87969C15.0195 6.48969 15.3295 6.17969 15.7195 6.17969H21.2995C21.6895 6.17969 21.9995 6.48969 21.9995 6.87969C21.9995 7.26969 21.6895 7.57969 21.2995 7.57969Z" fill="#002B45"/>
+                                <path d="M6.42 7.57969H2.7C2.31 7.57969 2 7.26969 2 6.87969C2 6.48969 2.31 6.17969 2.7 6.17969H6.42C6.81 6.17969 7.12 6.48969 7.12 6.87969C7.12 7.26969 6.8 7.57969 6.42 7.57969Z" fill="#002B45"/>
+                                <path d="M10.1395 10.8297C12.321 10.8297 14.0895 9.06121 14.0895 6.87969C14.0895 4.69816 12.321 2.92969 10.1395 2.92969C7.95793 2.92969 6.18945 4.69816 6.18945 6.87969C6.18945 9.06121 7.95793 10.8297 10.1395 10.8297Z" fill="#002B45"/>
+                                <path d="M21.3009 17.8062H17.5809C17.1909 17.8062 16.8809 17.4963 16.8809 17.1063C16.8809 16.7163 17.1909 16.4062 17.5809 16.4062H21.3009C21.6909 16.4062 22.0009 16.7163 22.0009 17.1063C22.0009 17.4963 21.6909 17.8062 21.3009 17.8062Z" fill="#002B45"/>
+                                <path d="M8.28 17.8062H2.7C2.31 17.8062 2 17.4963 2 17.1063C2 16.7163 2.31 16.4062 2.7 16.4062H8.28C8.67 16.4062 8.98 16.7163 8.98 17.1063C8.98 17.4963 8.66 17.8062 8.28 17.8062Z" fill="#002B45"/>
+                                <path d="M13.8602 21.0719C16.0417 21.0719 17.8102 19.3034 17.8102 17.1219C17.8102 14.9404 16.0417 13.1719 13.8602 13.1719C11.6786 13.1719 9.91016 14.9404 9.91016 17.1219C9.91016 19.3034 11.6786 21.0719 13.8602 21.0719Z" fill="#002B45"/>
+                            </svg>
+                            <span>Фильтры</span>
+                        </button>
+                        <div class="config-filter__wrap">
+                            <div class="config-filter__top">
+                                <div class="config-filter__title">Фильтры</div>
+                                <button class="config-filter__close">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g opacity="0.3">
+                                        <path d="M5 5L19 19M19 5L5 19" stroke="#002B45" stroke-width="2" stroke-linecap="round"/>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="config-filter__scroll">
+                                <div class="config-filter">
+                                    @@include('components/filter/_type2.html')
+                                    <!--  -->
+                                    @@include('components/filter/_type.html')
+                                    <!--  -->
+                                    @@include('components/filter/_items.html')
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    @@include('components/filter/_map.html')
+                    <!--  -->
+                    @@include('components/filter/_adv-banners.html')
+                </div>
+            </section>
+
+
+
+            <section class='consult'>
+                @@include('components/page-blocks/_consult.html')
+            </section>
+
+        </main>
+        @@include('components/page-blocks/_footer.html')
+    </div>
+
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

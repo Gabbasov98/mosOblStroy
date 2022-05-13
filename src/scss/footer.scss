@@ -1,1 +1,288 @@
 @import "vars";
+.footer {
+    padding: 50px 0 95px;
+    &__inner {
+        padding-right: 370px;
+        position: relative;
+    }
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__logo {
+        width: 270px;
+        display: block;
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+    }
+    &__info {
+        max-width: 250px;
+        background: linear-gradient(180deg, #00609A 0%, #1B3646 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        font-size: 14px;
+        line-height: 180%;
+        padding-top: 3px;
+    }
+    &__links {
+        width: 470px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-right: 100px;
+        gap: 10px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 180%;
+        background: linear-gradient(180deg, #00609A 0%, #1B3646 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+    &__contacts {
+        position: absolute;
+        top: 120px;
+        right: 0;
+    }
+    &__socials {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        &-item {
+            margin-left: 15px;
+            &:hover {
+                path {
+                    fill: $orange;
+                }
+            }
+        }
+    }
+    &__mail {
+        margin-top: 30px;
+        font-size: 18px;
+        line-height: 180%;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1850px) {
+    .footer {
+        &__links {
+            width: 436px;
+        }
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .footer {
+        padding: 30px 0 40px;
+        &__inner {
+            padding-right: 300px;
+        }
+        &__contacts {
+            top: 107px;
+        }
+        &__mail {
+            margin-top: 20px;
+        }
+        &__bottom {
+            margin-top: 38px;
+        }
+        &__info {
+            padding-top: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .footer {
+        padding: 25px 0 30px;
+        &__inner {
+            padding-right: 290px;
+        }
+        &__contacts {
+            top: 80px;
+        }
+        &__mail {
+            font-size: 16px;
+        }
+        &__bottom {
+            margin-top: 25px;
+        }
+        &__info {
+            font-size: 12px;
+        }
+        &__links {
+            font-size: 14px;
+            width: 335px;
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .footer {
+        padding-top: 35px;
+        &__inner {
+            padding-right: 0;
+        }
+        &__mail {
+            margin-top: 17px;
+        }
+        &__bottom {
+            margin-top: -10px;
+            padding-right: 350px;
+        }
+        &__info {
+            padding-top: 85px;
+        }
+        &__links {
+            font-size: 14px;
+            width: unset;
+            padding-right: 0px;
+            grid-template-columns: 60px 120px;
+            gap: 0px 80px;
+        }
+        &__phone {
+            font-size: 33px;
+        }
+        &__socials {
+            &-item {
+                margin-left: 20px;
+                svg {
+                    width: 36px;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .footer {
+        padding-bottom: 35px;
+        &__mail {
+            margin-top: 20px;
+        }
+        &__bottom {
+            margin-top: 18px;
+            padding: 0;
+            flex-wrap: wrap;
+            max-width: 300px;
+        }
+        &__info {
+            order: 2;
+            padding: 0;
+            margin-top: 34px;
+        }
+        &__link {
+            line-height: 180%;
+        }
+        &__links {
+            font-size: 15px;
+        }
+        &__contacts {
+            top: 100px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        padding: 25px 0 20px;
+        &__mail {
+            margin-top: 10px;
+        }
+        &__logo {
+            width: 212px;
+        }
+        &__top {
+            display: block;
+        }
+        &__phone {
+            font-size: 25px;
+            display: block;
+            margin-top: 33px;
+        }
+        &__contacts {
+            position: relative;
+            right: unset;
+            top: unset;
+        }
+        &__socials {
+            position: absolute;
+            bottom: 100%;
+            margin-bottom: 10px;
+            right: 0;
+            &-item {
+                margin-left: 15px;
+                svg {
+                    width: 32px;
+                }
+            }
+        }
+        &__bottom {
+            margin-top: 20px;
+        }
+        &__info {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        &__link {
+            line-height: 180%;
+        }
+        &__links {
+            font-size: 14px;
+            gap: 0px 60px;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .footer {
+        padding-bottom: 40px;
+        &__mail {
+            margin-top: 15px;
+        }
+        &__contacts {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &__socials {
+            position: static;
+            width: 100%;
+            margin: 10px 0 0;
+            order: 2;
+            justify-content: flex-start;
+            &-item {
+                margin: 0 15px 0 0;
+                svg {
+                    width: 32px;
+                }
+            }
+        }
+        &__bottom {
+            margin-top: 20px;
+        }
+        &__info {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        &__link {
+            line-height: 180%;
+        }
+        &__links {
+            font-size: 14px;
+            gap: 0px 60px;
+        }
+    }
+}

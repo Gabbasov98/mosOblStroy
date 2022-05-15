@@ -21,3 +21,117 @@
         color: #FFFFFF;
     }
 }
+
+.btn-orange-outline {
+    border: 1px solid $orange;
+    color: $orange;
+    &:hover {
+        background-color: $orange;
+        color: #fff;
+        path {
+            fill: #fff;
+        }
+    }
+}
+
+.btn-grey {
+    border: 1px solid rgba($blue, 0.6);
+    color: rgba($blue, 0.6);
+    &:hover {
+        background-color: rgba($blue, 0.6);
+        border-color: transparent;
+        color: #fff;
+        path {
+            fill: #fff;
+        }
+    }
+}
+
+.orange-link {
+    color: $orange;
+    &:hover {
+        color: $orange2;
+        path {
+            fill: $orange2;
+        }
+    }
+}
+
+.black-link {
+    font-weight: 400;
+    font-size: 18px;
+    color: $blue;
+    &:hover {
+        color: #427696;
+        path {
+            fill: #427696;
+        }
+    }
+}
+
+.black-link2 {
+    font-weight: 400;
+    font-size: 18px;
+    color: $blue;
+    &:hover {
+        color: $orange;
+        path {
+            stroke: $orange;
+        }
+    }
+}
+
+.favourite-btn {
+    &--active {
+        background-color: $orange;
+        .favourite-btn__icon {
+            background-image: url(../img/favourite3.svg);
+        }
+        span {
+            color: #fff;
+        }
+        &:hover {
+            background-color: $orange2;
+            .favourite-btn__icon {
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &__icon {
+        background-image: url(../img/favourite.svg);
+        width: 20px;
+        height: 20px;
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% auto;
+        position: relative;
+        display: block;
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            width: 27px;
+            height: 18px;
+            background-image: url(../img/favourite-line.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100% auto;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: all .225s;
+        }
+    }
+    span {
+        margin-left: 10px;
+    }
+    &:hover {
+        .favourite-btn__icon {
+            background-image: url(../img/favourite2.svg);
+        }
+    }
+}

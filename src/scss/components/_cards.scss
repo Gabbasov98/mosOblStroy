@@ -1,0 +1,102 @@
+@import "../vars";
+.catalog-card {
+    background: #FFFFFF;
+    border-radius: 15px;
+    padding: 20px;
+    &__title {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 130%;
+        display: block;
+    }
+    &__img {
+        margin-top: 15px;
+        height: 196px;
+        position: relative;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    }
+    &__side {
+        border-radius: 8px;
+        border: 1px solid rgba(0, 43, 69, 0.8);
+        background-color: $greyBg;
+        width: 31px;
+        height: 31px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 16px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+    &__size {
+        position: absolute;
+        height: 31px;
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+        border-radius: 8px;
+        background-color: $orange;
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        font-weight: 700;
+        font-size: 16px;
+        color: #FFFFFF;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .catalog-card {
+        &__title {
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .catalog-card {
+        &__title {
+            font-size: 18px;
+        }
+        &__img {
+            height: 155px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .catalog-card {
+        &__title {
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .catalog-card {
+        &__side {
+            width: 26px;
+            height: 26px;
+            font-size: 14px;
+        }
+        &__size {
+            height: 28px;
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .catalog-card {
+        &__img {
+            height: 105px;
+        }
+    }
+}

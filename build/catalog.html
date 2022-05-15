@@ -7,7 +7,7 @@
     <meta name="keywords" content="">
     <link rel="stylesheet" href="css/libs.min.css">
     <link rel="stylesheet" href="css/style.min.css">
-    <title>Главная</title>
+    <title>Каталог</title>
 </head>
 
 <body>
@@ -149,7 +149,7 @@
         <main class="content">
 
             <section class='breadcrums'>
-                <div class='container'>
+                <div class='container container--small'>
                     <div class='breadcrums__inner'>
                         <a href="" class="breadcrums__item">Главная</a>
                         <span class="breadcrums__item">Размещение рекламы</span>
@@ -158,7 +158,7 @@
             </section>
 
             <section class='config config-catalog'>
-                <div class='container'>
+                <div class='container container--small'>
                     <div class='config__top'>
                         <div class="config-catalog__title display2">
                             Каталог рекламных щитов
@@ -460,7 +460,8 @@
                             </div>
                         </div>
                     </div>
-
+                </div>
+                <div class="container">
                     <div class="config__map" id="map">
     <button class="config__map-info">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -618,12 +619,285 @@
                 </div>
             </section>
 
+            <section class='catalog'>
+                <div class='container container--small'>
+                    <div class="catalog__table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <div class="catalog__th">
+                                            Адрес рекламной конструкции
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="catalog__th">
+                                            Инвентарный
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="catalog__th">
+                                            № Формат
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="catalog__th">
+                                            Сторона
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="catalog__th">
+                                            Месяц
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="catalog__th">
+                                            <!-- Месяц -->
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="catalog-row">
+                                    <td>
+    <div class="catalog-row__content">
+        <div class="catalog-row__img resize-img__wrap">
+            <div class="resize-img">
+                <img src="img/catalog2.webp" alt="">
+                <button class="resize-img__btn"></button>
+            </div>
+        </div>
+        <div class="catalog-row__info">
+            <a href="" class="catalog-row__title">Горьковское шоссе 17км+370м (2км+370м от МКАД) Справа</a>
+            <!--  -->
+            
+        </div>
+    </div>
+</td>
+<td>
+    <span class="catalog-row__inv">6785435 </span>
+</td>
+<td>
+    <div class="catalog-row__format catalog-row__format--purple">
+        <i></i>
+        <span>Цифровой суперсайт 4х12</span>
+    </div>
+</td>
+<td>
+    <span class="catalog-row__side">A</span>
+</td>
+<td>
+    <div class="catalog-row__dates">
+        <div class="catalog-row__dates-title">Выберите месяц:</div>
+        <div class="catalog-row__months">
+            
+            <div class="catalog-row__month month month--busy" tooltip>Июл</div>
+             
+            <div class="catalog-row__month month"  tooltip>Авг</div>
+            <div class="catalog-row__month month"  tooltip>Сент</div>
+            <div class="catalog-row__month month"  tooltip>Окт</div>
+            <div class="catalog-row__month month"  tooltip>Ноя</div>
+            <div class="catalog-row__month month"  tooltip>Дек</div>
+        </div>
+    </div>
+</td>
+<td>
+    
+
+    <div class="catalog-row__action">
+        <button class="catalog-row__price btn btn-orange-outline" data-desktop="Узнать цену" data-mob="Цена">
+            
+        </button>
+        <button class="catalog-row__favourite favourite-btn btn btn-orange-outline">
+            <i class="favourite-btn__icon"></i>
+            <span>В избранное</span>
+        </button>
+    </div>
+    
+    <!--  -->
+    
+</td>
+                                </tr>
+                                <tr class="catalog-row">
+                                    <td>
+    <div class="catalog-row__content">
+        <div class="catalog-row__img resize-img__wrap">
+            <div class="resize-img">
+                <img src="img/catalog2.webp" alt="">
+                <button class="resize-img__btn"></button>
+            </div>
+        </div>
+        <div class="catalog-row__info">
+            <a href="" class="catalog-row__title">Горьковское шоссе 17км+370м (2км+370м от МКАД) Справа</a>
+            <!--  -->
+            
+            <div class="catalog-row__seen">Просмотрено</div>
+            
+        </div>
+    </div>
+</td>
+<td>
+    <span class="catalog-row__inv">6785435 </span>
+</td>
+<td>
+    <div class="catalog-row__format catalog-row__format--blue">
+        <i></i>
+        <span>Щит 3х6</span>
+    </div>
+</td>
+<td>
+    <span class="catalog-row__side">A</span>
+</td>
+<td>
+    <div class="catalog-row__dates">
+        <div class="catalog-row__dates-title">Выберите месяц:</div>
+        <div class="catalog-row__months">
+            
+            <div class="catalog-row__month month month--busy" tooltip>Июл</div>
+             
+            <div class="catalog-row__month month"  tooltip>Авг</div>
+            <div class="catalog-row__month month"  tooltip>Сент</div>
+            <div class="catalog-row__month month"  tooltip>Окт</div>
+            <div class="catalog-row__month month"  tooltip>Ноя</div>
+            <div class="catalog-row__month month"  tooltip>Дек</div>
+        </div>
+    </div>
+</td>
+<td>
+    
+
+    <div class="catalog-row__action">
+        <button class="catalog-row__price btn btn-orange-outline" data-desktop="Узнать цену" data-mob="Цена">
+            
+        </button>
+        <button class="catalog-row__favourite favourite-btn btn btn-orange-outline">
+            <i class="favourite-btn__icon"></i>
+            <span>В избранное</span>
+        </button>
+    </div>
+    
+    <!--  -->
+    
+</td>
+                                </tr>
+                                <tr class="catalog-row">
+                                    <td>
+    <div class="catalog-row__content">
+        <div class="catalog-row__img resize-img__wrap">
+            <div class="resize-img">
+                <img src="img/catalog2.webp" alt="">
+                <button class="resize-img__btn"></button>
+            </div>
+        </div>
+        <div class="catalog-row__info">
+            <a href="" class="catalog-row__title">Горьковское шоссе 17км+370м (2км+370м от МКАД) Справа</a>
+            <!--  -->
+            
+        </div>
+    </div>
+</td>
+<td>
+    <span class="catalog-row__inv">6785435 </span>
+</td>
+<td>
+    <div class="catalog-row__format catalog-row__format--pink">
+        <i></i>
+        <span>Скроллер 3х6</span>
+    </div>
+</td>
+<td>
+    <span class="catalog-row__side">A</span>
+</td>
+<td>
+    <div class="catalog-row__dates">
+        <div class="catalog-row__dates-title">Выберите месяц:</div>
+        <div class="catalog-row__months">
+            
+            <div class="catalog-row__month month month--busy" tooltip>Июл</div>
+             
+            <div class="catalog-row__month month"  tooltip>Авг</div>
+            <div class="catalog-row__month month"  tooltip>Сент</div>
+            <div class="catalog-row__month month"  tooltip>Окт</div>
+            <div class="catalog-row__month month"  tooltip>Ноя</div>
+            <div class="catalog-row__month month"  tooltip>Дек</div>
+        </div>
+    </div>
+</td>
+<td>
+    
+
+    <div class="catalog-row__action">
+        <button class="catalog-row__price btn btn-orange-outline" data-desktop="Узнать цену" data-mob="Цена">
+            
+        </button>
+        <button class="catalog-row__favourite favourite-btn btn btn-orange-outline">
+            <i class="favourite-btn__icon"></i>
+            <span>В избранное</span>
+        </button>
+    </div>
+    
+    <!--  -->
+    
+</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="pagination">
+    <a href="" class="pagination__btn btn pagination__btn--prev">
+        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 13L1 7L7 1" stroke="#002B45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </a>
+    <a href="" class="pagination__item pagination__item--active">1</a>
+    <a href="" class="pagination__item">2</a>
+    <a href="" class="pagination__item">3</a>
+    <a href="" class="pagination__item pagination__item--mob-hide">4</a>
+    <a href="" class="pagination__item pagination__item--mob-hide">5</a>
+    <a href="" class="pagination__item">...</a>
+    <a href="" class="pagination__item">20</a>
+    <a href="" class="pagination__btn btn pagination__btn--next">
+        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 13L7 7L0.999999 1" stroke="#002B45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </a>
+</div>
+                </div>
+            </section>
+
+            <section class='adv-moscow'>
+                <div class='container container--small'>
+                    <div class='adv-moscow__inner'>
+                        <h2 class="adv-moscow__title display2">Размещение рекламы в Москве</h2>
+                        <div class="adv-moscow__desc">
+                            <p>Оператор наружной рекламы «Мособлреклама» предоставляет большой выбор эффективных и недорогих билбордов на дорогах, вылетных шоссе, ТТК, во всех административных округах Москвы. Заметные и яркие скроллеры в центре. Цены на
+                                аренду рекламных щитов 3х6 в Москве начинаются от 38 000 руб./мес.</p>
+                            <p>«Мособлреклама» является одним из 2 эксклюзивных операторов наружной рекламы в Новой Москве - большом и быстрорастущем районе с огромными транспортными потоками.</p>
+                            <p>Аренда щитов в Москве — не самый дешёвый вид рекламы, однако окупаемость вложений в рекламу находится на высочайшем уровне, ведь рекламодатель получает в своё распоряжение практически бесконечную аудиторию.</p>
+                            <p>Ключевым приоритетом «Мособлрекламы» является развитие собственной сети премиальных цифровых рекламных конструкций. Компания в этом преуспела, и на данный момент является собственником крупнейшей сети цифровых билбордов в Московской
+                                области, а также на МКАДе.</p>
+                        </div>
+                        <div class="adv-moscow__buttons">
+                            <button class="adv-moscow__btn btn btn-orange-outline">Реклама на цифровых видеоэкранах</button>
+                            <button class="adv-moscow__btn btn btn-orange-outline">Реклама на МКАД</button>
+                        </div>
+                        <div class="adv-moscow__list">
+                            <a href="" class="adv-moscow__link">Реклама на цифровых билбордах</a>
+                            <a href="" class="adv-moscow__link">Реклама в метро (стикеры, wi-fi)</a>
+                            <a href="" class="adv-moscow__link">Реклама на остановках (Москва)</a>
+                            <a href="" class="adv-moscow__link">Реклама на МКАД</a>
+                            <a href="" class="adv-moscow__link">Реклама на маршрутках и автобусах (Москва)</a>
+                            <a href="" class="adv-moscow__link">Реклама на ТТК</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
 
             <section class='consult'>
                 <div class='container'>
     <div class='consult__inner'>
-        <h2 class="consult__title display2">Хотите эффективную и доступную рекламу?</h2>
+        <h2 class="consult__title display2">Узнайте актуальные цены</h2>
         <p class="consult__desc">Заполните форму ниже и мы свяжемся с вами в ближайшее время!</p>
         <form action="" class="consult__form">
             <fieldset class='consult__form-group form-group'>
@@ -642,6 +916,27 @@
     </div>
 </div>
             </section>
+
+            <div class="favourite-modal">
+    <button class="favourite-modal__close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.5">
+            <path d="M5 5L19 19M19 5L5 19" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            </g>
+        </svg>
+    </button>
+    <a href="" class="favourite-modal__btn btn btn-orange">
+        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.0013 18.5404C9.74297 18.5404 9.49297 18.507 9.28464 18.432C6.1013 17.3404 1.04297 13.4654 1.04297 7.74036C1.04297 4.8237 3.4013 2.45703 6.3013 2.45703C7.70964 2.45703 9.0263 3.5152 10.0013 4.49854C10.9763 3.5152 12.293 2.45703 13.7013 2.45703C16.6013 2.45703 18.9596 4.83203 18.9596 7.74036C18.9596 13.4737 13.9013 17.3404 10.718 18.432C10.5096 18.507 10.2596 18.5404 10.0013 18.5404Z" fill="white"/>
+        </svg>
+        <span class="favourite-modal__btn-title">Смотреть все</span>
+        <span class="favourite-modal__btn-num">4</span>
+    </a>
+    <div class="favourite-modal__desc">
+        <p>Дополнительная скидка <span>3%</span> предоставляется при заказе от 3-х рекламных конструкций (РК), далее по 1% за каждую РК. </p>
+        <p>Максимальная дополнительная скидка <span>10%</span> (суммируется с некоторыми другими акционными предложениями). </p>
+    </div>
+</div>
 
         </main>
         <footer class='footer'>

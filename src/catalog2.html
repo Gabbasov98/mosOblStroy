@@ -1,0 +1,97 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"Каталог", "description":"", "keywords":"",})
+
+<body>
+    <div class="wrapper">
+        @@include('components/page-blocks/_header.html')
+        <main class="content">
+
+            <section class='breadcrums'>
+                <div class='container container--small'>
+                    <div class='breadcrums__inner'>
+                        <a href="" class="breadcrums__item">Главная</a>
+                        <span class="breadcrums__item">Размещение рекламы</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class='config config-catalog'>
+                <div class='container container--small'>
+                    <div class='config__top'>
+                        <div class="config-catalog__title display2">
+                            Каталог рекламных щитов (стр. 2)
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class='catalog'>
+                <div class='container container--small'>
+                    <div class="catalog__table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <div class="catalog__th">
+                                            Адрес рекламной конструкции
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="catalog__th">
+                                            Инвентарный
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="catalog__th">
+                                            № Формат
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="catalog__th">
+                                            Сторона
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="catalog__th">
+                                            Месяц
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="catalog__th">
+                                            <!-- Месяц -->
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="catalog-row">
+                                    @@include('components/catalog/_catalog-row.html',{"favourite":"false","seen":"false","bg-color":"purple","type":"Цифровой суперсайт 4х12"})
+                                </tr>
+                                <tr class="catalog-row">
+                                    @@include('components/catalog/_catalog-row.html',{"favourite":"false","seen":"true","bg-color":"blue","type":"Щит 3х6"})
+                                </tr>
+                                <tr class="catalog-row">
+                                    @@include('components/catalog/_catalog-row.html',{"favourite":"false","seen":"false","bg-color":"pink","type":"Скроллер 3х6"})
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    @@include('components/page-blocks/_pagination.html')
+                </div>
+            </section>
+
+            @@include('components/catalog/_favourite-modal.html')
+
+            <section class='consult'>
+                @@include('components/page-blocks/_consult.html',{"title":"Узнайте актуальные цены"})
+            </section>
+
+
+
+        </main>
+        @@include('components/page-blocks/_footer.html')
+    </div>
+
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

@@ -4,6 +4,7 @@
 @import 'components/fonts.scss';
 @import 'components/filter.scss';
 @import 'components/adv-banners.scss';
+@import 'components/_cards.scss';
 input {
     color: $blue;
     font-weight: 500;
@@ -15,7 +16,8 @@ input {
 .form-group {
     position: relative;
     margin: 0;
-    input {
+    input,
+    textarea {
         border: 1px solid #E7ECEF;
         border-radius: 13px;
         background-color: #fff;
@@ -32,6 +34,11 @@ input {
             border-color: $blue;
             outline: none;
         }
+    }
+    textarea {
+        resize: none;
+        height: 165px;
+        padding: 24px 30px;
     }
     &__error {
         display: none;
@@ -141,12 +148,204 @@ input {
     }
 }
 
+[tooltip] {
+    position: relative;
+    &:hover {
+        cursor: pointer;
+        &::before {
+            opacity: 1;
+            pointer-events: unset;
+        }
+    }
+    &::before {
+        content: attr(tooltip);
+        position: absolute;
+        padding: 10px 15px;
+        white-space: nowrap;
+        min-height: 39px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: 100%;
+        left: 50%;
+        margin-bottom: 8px;
+        transform: translateX(-50%);
+        background: #FFFFFF;
+        box-shadow: 0px 4px 20px rgba(42, 58, 67, 0.1);
+        border-radius: 8px;
+        color: $blue;
+        opacity: 0;
+        pointer-events: none;
+        transition: all .225s;
+        z-index: 5;
+    }
+}
+
+.resize-img {
+    position: relative;
+    &--active {
+        width: 340px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.25), 0px 8px 8px -4px rgba(16, 24, 40, 0.2);
+        .resize-img__btn {
+            background-image: url(../img/resize2.svg);
+        }
+    }
+    &__wrap {
+        position: relative;
+    }
+    &__btn {
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background-image: url(../img/resize.svg);
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.pagination {
+    margin-top: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__btn {
+        width: 65px;
+        height: 65px;
+        border-radius: 13px;
+        border: 1px solid $blue;
+        &:hover {
+            border-color: $orange;
+            path {
+                stroke: $orange;
+            }
+        }
+        &--prev {
+            margin-right: 50px;
+        }
+        &--next {
+            margin-left: 15px;
+        }
+    }
+    &__item {
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 150%;
+        color: rgba($blue, 0.6);
+        margin-right: 35px;
+        &--active {
+            font-weight: 600;
+            font-size: 26px;
+            line-height: 130%;
+            transform: translateY(-4px);
+            pointer-events: none;
+        }
+    }
+}
+
+.copy-btn {
+    position: relative;
+    cursor: pointer;
+    justify-content: flex-start;
+    display: inline-flex;
+    &__copied {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 381px;
+        height: 62px;
+        position: absolute;
+        left: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 20px;
+        background: $greyBg;
+        border: 1px solid rgba(0, 96, 154, 0.2);
+        box-shadow: 0px 4px 15px rgba(34, 60, 75, 0.1);
+        border-radius: 8px;
+        color: rgba($blue, 0.8);
+        svg {
+            margin-right: 10px;
+            path {
+                fill: $green !important;
+            }
+        }
+    }
+}
+
+.month {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $green;
+    color: $green;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    border-radius: 8px;
+    &:not([tooltip]) {
+        &::before {
+            display: none;
+        }
+    }
+    &::before {
+        content: 'Добавить в избранное';
+    }
+    &:hover {
+        background-color: $green;
+        color: #fff;
+    }
+    &--busy {
+        border-color: $red;
+        color: $red;
+        &:hover {
+            background-color: $red;
+        }
+    }
+    &--added {
+        background-color: $green;
+        color: #fff;
+        &::before {
+            content: 'Удалить из избранного';
+        }
+        &:hover {
+            background-color: $green2;
+            border-color: $green2;
+        }
+        &.month--busy {
+            background-color: $red;
+            &:hover {
+                background-color: $red2;
+                border-color: $red2;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .pagination {
+        margin-top: 60px;
+    }
+}
+
 @media screen and (max-width: 1440px) {
     .form-group {
         input {
             height: 57px;
             padding: 0 25px;
             font-size: 15px;
+        }
+        textarea {
+            height: 130px;
+            padding-left: 25px;
+            padding-right: 25px;
         }
         &__error {
             margin-top: 2px;
@@ -156,6 +355,54 @@ input {
     .breadcrums {
         margin-top: 40px;
     }
+    .pagination {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .pagination {
+        &__item {
+            margin-right: 30px;
+            font-size: 20px;
+            &--active {
+                font-size: 24px;
+                transform: unset;
+            }
+        }
+        &__btn {
+            &--next {
+                margin-left: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .pagination {
+        margin-top: 40px;
+        &__item {
+            margin-right: 26px;
+            font-size: 18px;
+            &--active {
+                font-size: 22px;
+            }
+        }
+        &__btn {
+            width: 57px;
+            height: 57px;
+            &--next {
+                margin-left: 24px;
+            }
+        }
+    }
+    .copy-btn {
+        &__copied {
+            width: 363px;
+            height: 54px;
+            margin-left: 10px;
+        }
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -164,12 +411,94 @@ input {
         height: 8px;
         border-radius: 2px;
     }
+    .pagination {
+        justify-content: space-between;
+        &__item {
+            font-size: 16px;
+            &--active {
+                font-size: 20px;
+            }
+            &--mob-hide {
+                display: none;
+            }
+            &:nth-last-child(2) {
+                margin-right: 0;
+            }
+        }
+        &__btn {
+            width: 50px;
+            height: 50px;
+            &--next {
+                margin-left: auto;
+            }
+            &--prev {
+                margin-right: auto;
+            }
+            svg {
+                width: 6px;
+                height: auto;
+            }
+        }
+    }
+    .copy-btn {
+        display: flex;
+        &__copied {
+            transform: unset;
+            left: 0;
+            top: unset;
+            bottom: 100%;
+            width: 330px;
+            height: 60px;
+            font-size: 14px;
+            margin: 0 0 7px;
+        }
+    }
+    .breadcrums {
+        &__inner {
+            display: flex;
+            align-items: center;
+            overflow-x: auto;
+            width: calc(100% + 15px);
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                z-index: 1;
+                background: linear-gradient(270deg, #FFFFFF 17.53%, rgba(255, 255, 255, 0) 82.47%);
+                width: 77px;
+                height: 100%;
+                right: 0;
+                top: 0;
+            }
+            &::-webkit-scrollbar {
+                width: 0;
+            }
+        }
+        &__item {
+            white-space: nowrap;
+        }
+    }
 }
 
 @media screen and (max-width: 375px) {
     .form-group {
         input {
             padding: 0 20px;
+        }
+    }
+    .resize-img {
+        position: relative;
+        &--active {
+            width: 250px;
+        }
+    }
+    .pagination {
+        margin-top: 30px;
+        &__item {
+            font-size: 14px;
+            &--active {
+                font-size: 16px;
+            }
         }
     }
 }

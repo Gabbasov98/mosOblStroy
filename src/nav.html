@@ -1,0 +1,91 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"Главная", "description":"", "keywords":"",})
+
+
+<style>
+    .wrapper a {
+        font-size: 30px;
+    }
+    
+    .wrapper button {
+        margin-bottom: 25px;
+        min-width: 300px;
+        max-width: 400px;
+        padding: 0 50px;
+        height: 65px;
+    }
+</style>
+
+<body>
+
+    <div class="wrapper" style="padding: 50px;">
+        <a href="index.html" style="display: block; margin-bottom: 20px;">
+            Главная
+        </a>
+        <a href="catalog.html" style="display: block; margin-bottom: 20px;">
+            Каталог
+        </a>
+        <a href="catalog2.html" style="display: block; margin-bottom: 20px;">
+            Каталог 2
+        </a>
+        <a href="favourite.html" style="display: block; margin-bottom: 20px;">
+            Избранное
+        </a>
+        <a href="catalog-item.html" style="display: block; margin-bottom: 20px;">
+            Карточка товара
+        </a>
+        <a href="promo.html" style="display: block; margin-bottom: 20px;">
+            Акции
+        </a>
+        <a href="contacts.html" style="display: block; margin-bottom: 20px;">
+            Контакты
+        </a>
+        <a href="contacts2.html" style="display: block; margin-bottom: 20px;">
+            Контакты 2
+        </a>
+        <a href="promo.html" style="display: block; margin-bottom: 20px;">
+            Услуги
+        </a>
+        <a href="news.html" style="display: block; margin-bottom: 20px;">
+            Новости
+        </a>
+        <a href="categories.html" style="display: block; margin-bottom: 20px;">
+            Категории
+        </a>
+        <a href="requirements.html" style="display: block; margin-bottom: 20px;">
+            Технические требования
+        </a>
+        <a href="cases.html" style="display: block; margin-bottom: 20px;">
+            Кейсы
+        </a>
+        <a href="feedback.html" style="display: block; margin-bottom: 20px;">
+            Отзывы
+        </a>
+        <a href="news-item.html" style="display: block; margin-bottom: 20px;">
+            Новость
+        </a>
+        <a href="news-item2.html" style="display: block; margin-bottom: 20px;">
+            Новость 2
+        </a>
+        <a href="news-item3.html" style="display: block; margin-bottom: 20px;">
+            Новость 3
+        </a>
+
+
+        <button style="border: 2px solid #000;margin-bottom: 20px;" data-bs-toggle="modal" data-bs-target="#modal1">
+            Заявка на бесплатную консультацию
+        </button>
+        <button style="border: 2px solid #000;margin-bottom: 20px;" data-bs-toggle="modal" data-bs-target="#modal2">
+            Запросить стоимость размещения рекламы
+        </button>
+        <button style="border: 2px solid #000;margin-bottom: 20px;" data-bs-toggle="modal" data-bs-target="#modal3">
+            Забронировать рекламу
+        </button>
+
+    </div>
+
+    @@include('components/page-blocks/_popups.html')
+    <!--  -->
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

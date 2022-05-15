@@ -1,0 +1,177 @@
+<!DOCTYPE html> @@include('components/page-blocks/_head.html',{ "lang":"ru", "title":"Контакты", "description":"", "keywords":"",})
+
+<body>
+    <div class="wrapper">
+        @@include('components/page-blocks/_header.html')
+        <main class="content">
+
+            <section class='breadcrums'>
+                <div class='container container--small2'>
+                    <div class='breadcrums__inner'>
+                        <a href="" class="breadcrums__item">Главная</a>
+                        <span class="breadcrums__item">Контакты</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class='contacts'>
+                <div class='container container--small2'>
+                    <h1 class="contacts__title display2">
+                        Контакты Группы Компаний <br> «Мособлреклама»
+                        <span class="rect rect1"></span>
+                        <span class="rect rect2"></span>
+                    </h1>
+                    <div class="contacts__buttons">
+                        <a href="contacts.html" class="contacts__btn btn btn-orange">Главный офис</a>
+                        <a href="contacts2.html" class="contacts__btn btn btn-orange-outline">База ГК «Мособлреклама»</a>
+                    </div>
+                    <div class='contacts__inner'>
+                        <div class="contacts__left">
+                            <div class="contacts__items">
+                                <div class="contacts__item">
+                                    <div class="contacts__item-icon">
+                                        <img src="img/location.svg" alt="">
+                                    </div>
+                                    <div class="contacts__item-info">
+                                        101000, г. Москва, Ул. Мясницкая д.24/7, <br> подъезд №7, вход со стороны Банковского переулка, 5 этаж, офис №75.
+                                    </div>
+                                </div>
+                                <div class="contacts__item">
+                                    <div class="contacts__item-icon">
+                                        <img src="img/clock.svg" alt="">
+                                    </div>
+                                    <div class="contacts__item-info">
+                                        Пн-Пт — с 09:00 до 19:00, <br> Сб, Вс — с 11:00 до 16:00
+                                    </div>
+                                </div>
+                                <div class="contacts__item">
+                                    <div class="contacts__item-icon">
+                                        <img src="img/call.svg" alt="">
+                                    </div>
+                                    <div class="contacts__item-info">
+                                        <a href="tel:+74956235555">+7(495) 623-55-55,</a> <a href="tel:+74956237076">+7 (495) 623-70-76</a>
+                                    </div>
+                                </div>
+                                <div class="contacts__item">
+                                    <div class="contacts__item-icon">
+                                        <img src="img/fax.svg" alt="">
+                                    </div>
+                                    <div class="contacts__item-info">
+                                        +7 (495) 623-64-45 (факс)
+                                    </div>
+                                </div>
+                                <div class="contacts__item">
+                                    <div class="contacts__item-icon">
+                                        <img src="img/sms.svg" alt="">
+                                    </div>
+                                    <div class="contacts__item-info">
+                                        <a href="mailto:zakaz@mosoblreclama.ru">zakaz@mosoblreclama.ru</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contacts__right">
+                            <div class="contacts__map">
+                                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A935bfdda518040fed01314a49d9b6cfc15948273321d905d48960345c2969c0a&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class='workers'>
+                <div class='workers__inner'>
+                    <div class="workers__group">
+                        <div class="workers__title">Руководитель отдела продаж:</div>
+                        <div class="workers__items">
+                            <div class="worker-card">
+                                @@include('components/contacts/_worker-card.html',{"img":"worker2","name":"Трушин Денис","mail":"trushin@mosoblreclama.ru (доб. 402)"})
+                            </div>
+                        </div>
+                    </div>
+                    <div class="workers__group">
+                        <div class="workers__title">Менеджеры отдела продаж:</div>
+                        <div class="workers__items">
+                            <div class="worker-card">
+                                @@include('components/contacts/_worker-card.html',{"img":"worker3","name":"Ибрагимов Ринат","mail":"rinat@mosoblreclama.ru (доб. 401)"})
+                            </div>
+                            <div class="worker-card">
+                                @@include('components/contacts/_worker-card.html',{"img":"worker4","name":"Боганова Ирина","mail":"ira@mosoblreclama.ru (доб. 403)"})
+                            </div>
+                            <div class="worker-card">
+                                @@include('components/contacts/_worker-card.html',{"img":"worker5","name":"Алехина Кристина","mail":"alehina@mosoblreclama.ru (доб. 404)"})
+                            </div>
+                            <div class="worker-card">
+                                @@include('components/contacts/_worker-card.html',{"img":"worker6","name":"Гирба Антон","mail":"anton@mosoblreclama.ru (доб. 405)"})
+                            </div>
+                            <div class="worker-card">
+                                @@include('components/contacts/_worker-card.html',{"img":"worker7","name":"Фокин Илья","mail":"ilya@mosoblreclama.ru (доб. 406)"})
+                            </div>
+                            <div class="worker-card">
+                                @@include('components/contacts/_worker-card.html',{"img":"user","name":"Ширков Павел","mail":"pavels@mosoblreclama.ru (доб. 407)"})
+                            </div>
+                            <div class="worker-card">
+                                @@include('components/contacts/_worker-card.html',{"img":"worker8","name":"Снытко Галина","mail":"galina@mosoblreclama.ru (доб. 409)"})
+                            </div>
+                            <div class="worker-card">
+                                @@include('components/contacts/_worker-card.html',{"img":"worker9","name":"Орлецкий Дмитрий","mail":"d.orletskiy@mosoblreclama.ru (доб. 413)"})
+                            </div>
+                            <div class="worker-card">
+                                @@include('components/contacts/_worker-card.html',{"img":"user","name":"Ермаков Андрей","mail":"a.ermakov@mosoblreclama.ru (доб. 414)"})
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class='consult2'>
+                <div class='consult2__inner'>
+                    <div class="consult2__top">
+                        <div class="consult2__group">
+                            <div class="consult2__title">Служба контроля качества:</div>
+                            <a href="mailto:client@mosoblreclama.ru" class="consult2__mail">
+                                <img src="img/sms.svg" alt="">
+                                <span>client@mosoblreclama.ru</span>
+                            </a>
+                        </div>
+                        <div class="consult2__group2">
+                            <div class="consult2__title">Техподдержка сайта:</div>
+                            <a href="mailto:webmaster@mosoblreclama.ru" class="consult2__mail">
+                                <img src="img/sms.svg" alt="">
+                                <span>webmaster@mosoblreclama.ru</span>
+                            </a>
+                        </div>
+                    </div>
+                    <form action="" class="consult2__form">
+                        <div class="consult2__form-title">Направить обращение директору:</div>
+                        <div class="consult2__form-grid">
+                            <fieldset class='consult2__form-group form-group'>
+                                <input type='text' placeholder="Имя" />
+                            </fieldset>
+                            <fieldset class='consult2__form-group form-group'>
+                                <input type='tel' placeholder="Телефон" />
+                            </fieldset>
+                            <fieldset class='consult2__form-group form-group'>
+                                <input type='email' placeholder="Email" />
+                            </fieldset>
+                            <fieldset class='consult2__form-group consult2__form-group--full form-group'>
+                                <textarea placeholder="Введите текст сообщения"></textarea>
+                            </fieldset>
+                            <button class="consult2__btn btn btn-orange">Отправить</button>
+                            <div class="consult2__agree">
+                                Нажимая на кнопку, я соглашаюсь с условиями <br>
+                                <a href="">Политики конфиденциальности</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+        </main>
+        @@include('components/page-blocks/_footer.html')
+    </div>
+
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

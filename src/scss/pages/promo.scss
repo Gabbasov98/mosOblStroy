@@ -1,0 +1,746 @@
+@import '../vars.scss';
+.promo {
+    padding: 50px 0 60px;
+    &__title {
+        .rect {
+            width: 9px;
+            height: 9px;
+            transform: rotate(-45deg) translateY(-15px);
+        }
+        .rect1 {
+            margin-left: 110px;
+        }
+        .rect2 {
+            margin-left: -2px;
+        }
+    }
+    &__desc {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 150%;
+        margin-top: 30px;
+        max-width: 760px;
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 60px;
+    }
+    &__right {
+        width: 480px;
+        flex-shrink: 0;
+        margin-left: 80px;
+    }
+    &__left {
+        flex-grow: 1;
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.promo-card {
+    background: #FFFFFF;
+    border: 1px solid #E7ECEF;
+    border-radius: 40px;
+    padding: 50px;
+    &__img {
+        position: relative;
+        height: 283px;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 30px;
+        }
+    }
+    &__badge {
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        padding: 0 22px;
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        height: 63px;
+        border-radius: 12px;
+        background-color: $blue;
+        color: #FFFFFF;
+        font-weight: 700;
+        font-size: 36px;
+    }
+    &__title {
+        display: block;
+        font-weight: 600;
+        font-size: 34px;
+        line-height: 140%;
+        margin-top: 30px;
+        max-width: 645px;
+    }
+    &__info {
+        margin-top: 25px;
+        font-weight: 400;
+        display: none;
+        ul {
+            max-width: 515px;
+        }
+    }
+    &__more {
+        display: flex;
+        align-items: center;
+        margin-top: 25px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 150%;
+        svg {
+            margin-left: 10px;
+        }
+        &:hover {
+            color: $orange;
+            path {
+                stroke: $orange;
+            }
+        }
+        &--active {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+    &__bottom {
+        display: flex;
+        align-items: center;
+        margin-top: 35px;
+    }
+    &__btn {
+        padding: 0 70px;
+        font-size: 16px;
+        font-weight: 400;
+        height: 65px;
+        border-radius: 13px;
+    }
+    &__link {
+        margin-left: 30px;
+    }
+}
+
+.promo-contact {
+    border-radius: 20px;
+    padding: 50px;
+    background-color: $greyBg;
+    position: sticky;
+    top: 190px;
+    &__title {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 140%;
+    }
+    &__desc {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 150%;
+        margin-top: 10px;
+        color: rgba($blue, .8);
+        a {
+            font-size: 18px;
+            line-height: 150%;
+            font-weight: 700;
+        }
+        p {
+            display: inline;
+            margin: 0 !important;
+        }
+    }
+    &__form {
+        margin-top: 30px;
+        &-group {
+            margin-bottom: 15px;
+            input {
+                height: 65px;
+            }
+        }
+    }
+    &__btn {
+        height: 65px;
+        width: 100%;
+        border-radius: 13px;
+        font-weight: 400;
+        font-size: 16px;
+    }
+    &__agree {
+        margin-top: 15px;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 150%;
+        background: linear-gradient(180deg, #00609A 0%, #1B3646 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        a {
+            border-bottom: 1px solid $blue;
+            &:hover {
+                border-color: transparent;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1840px) {
+    .promo {
+        padding: 50px 0 60px;
+        &__desc {
+            margin-top: 25px;
+        }
+        &__inner {
+            margin-top: 40px;
+        }
+        &__right {
+            width: 380px;
+            margin-left: 70px;
+        }
+        &__item {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+    .promo-contact {
+        padding: 40px;
+        &__title {
+            font-size: 24px;
+        }
+        &__desc {
+            font-size: 16px;
+            a {
+                display: block;
+            }
+        }
+        &__form {
+            margin-top: 12px;
+            &-group {
+                margin-bottom: 10px;
+                input {
+                    height: 57px;
+                }
+            }
+        }
+        &__btn {
+            height: 57px;
+            font-size: 15px;
+        }
+        &__agree {
+            margin-top: 15px;
+            font-size: 12px;
+        }
+    }
+    .promo-card {
+        padding: 40px;
+        &__img {
+            img {
+                border-radius: 20px;
+            }
+        }
+        &__badge {
+            height: 58px;
+            bottom: 25px;
+            left: 25px;
+            font-size: 30px;
+        }
+        &__title {
+            font-size: 30px;
+        }
+        &__info {
+            margin-top: 20px;
+            p {
+                font-size: 16px;
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+            }
+            ul {
+                li {
+                    font-size: 16px;
+                    &::before {
+                        top: 9px;
+                    }
+                }
+            }
+        }
+        &__more {
+            margin-top: 20px;
+            font-size: 16px;
+            svg {
+                margin-left: 5px;
+                width: 20px;
+                height: auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .promo {
+        padding: 40px 0 50px;
+        &__desc {
+            margin-top: 20px;
+        }
+        &__right {
+            width: 327px;
+            margin-left: 60px;
+        }
+    }
+    .promo-contact {
+        padding: 30px;
+        top: 170px;
+        &__title {
+            font-size: 24px;
+        }
+        &__desc {
+            font-size: 14px;
+        }
+    }
+    .promo-card {
+        padding: 40px;
+        &__img {
+            img {
+                border-radius: 20px;
+            }
+        }
+        &__badge {
+            height: 52px;
+            font-size: 28px;
+        }
+        &__title {
+            font-size: 26px;
+            margin-top: 20px;
+            max-width: 100%;
+        }
+        &__info {
+            margin-top: 15px;
+            p {
+                font-size: 15px;
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+            }
+            ul {
+                li {
+                    font-size: 15px;
+                    &::before {
+                        top: 9px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .promo {
+        padding: 40px 0 35px;
+        &__title {
+            .rect1 {
+                margin-left: 80px;
+            }
+        }
+        &__inner {
+            display: block;
+            margin-top: 50px;
+        }
+        &__right {
+            width: 100%;
+            margin: 80px 0 0;
+        }
+    }
+    .promo-card {
+        padding: 40px;
+        &__img {
+            height: 251px;
+            img {
+                border-radius: 25px;
+            }
+        }
+        &__badge {
+            height: 58px;
+            font-size: 32px;
+            bottom: 20px;
+            left: 20px;
+        }
+        &__title {
+            font-size: 30px;
+            margin-top: 30px;
+            max-width: 550px;
+        }
+        &__info {
+            margin-top: 20px;
+            p {
+                font-size: 16px;
+            }
+            ul {
+                li {
+                    font-size: 16px;
+                }
+            }
+        }
+        &__bottom {
+            margin-top: 30px;
+        }
+    }
+    .promo-contact {
+        padding: 50px;
+        position: static;
+        border-radius: 40px;
+        &__title {
+            font-size: 48px;
+        }
+        &__desc {
+            margin-top: 20px;
+            font-size: 18px;
+            max-width: 690px;
+            a {
+                display: unset;
+                font-size: 28px;
+            }
+        }
+        &__form {
+            margin-top: 30px;
+            display: flex;
+            &-group {
+                margin: 0 10px 0 0;
+                width: 240px;
+                flex-shrink: 0;
+                input {
+                    height: 65px;
+                }
+            }
+        }
+        &__btn {
+            height: 65px;
+            width: 226px;
+            font-size: 16px;
+        }
+        &__agree {
+            margin-top: 20px;
+            font-size: 13px;
+            br {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .promo {
+        padding-top: 30px;
+        &__title {
+            .rect {
+                transform: rotate(-45deg) translateY(-5px);
+            }
+            .rect1 {
+                margin-left: 50px;
+            }
+        }
+        &__inner {
+            margin-top: 35px;
+        }
+        &__right {
+            margin-top: 70px;
+        }
+    }
+    .promo-card {
+        padding: 30px;
+        border-radius: 30px;
+        &__img {
+            height: 251px;
+            img {
+                border-radius: 20px;
+            }
+        }
+        &__badge {
+            height: 52px;
+            font-size: 28px;
+        }
+        &__title {
+            font-size: 26px;
+            margin-top: 20px;
+            max-width: 470px;
+        }
+        &__info {
+            margin-top: 15px;
+            p {
+                font-size: 14px;
+            }
+            ul {
+                li {
+                    font-size: 14px;
+                }
+            }
+        }
+        &__more {
+            font-size: 15px;
+        }
+        &__bottom {
+            margin-top: 25px;
+        }
+        &__btn {
+            font-size: 15px;
+        }
+        &__link {
+            font-size: 15px;
+            margin-left: 20px;
+        }
+    }
+    .promo-contact {
+        padding: 40px 30px;
+        border-radius: 30px;
+        &__title {
+            font-size: 36px;
+        }
+        &__desc {
+            margin-top: 15px;
+            font-size: 16px;
+            max-width: 580px;
+            a {
+                font-size: 21px;
+            }
+        }
+        &__form {
+            margin-top: 20px;
+            &-group {
+                flex-grow: 1;
+                flex-shrink: unset;
+                input {
+                    height: 57px;
+                }
+            }
+        }
+        &__btn {
+            height: 57px;
+            width: 206px;
+            font-size: 15px;
+            flex-shrink: 0;
+        }
+        &__agree {
+            margin-top: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .promo {
+        padding-bottom: 25px;
+        &__title {
+            .rect {
+                transform: rotate(-45deg) translateY(-3px);
+            }
+            .rect1 {
+                margin-left: 30px;
+            }
+            .rect2 {
+                margin-left: 6px;
+            }
+        }
+        &__desc {
+            font-size: 16px;
+            margin-top: 15px;
+        }
+        &__inner {
+            margin-top: 25px;
+        }
+        &__right {
+            margin-top: 50px;
+        }
+        &__item {
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .promo-card {
+        padding: 20px;
+        border-radius: 15px;
+        &__img {
+            height: 151px;
+            img {
+                border-radius: 15px;
+            }
+        }
+        &__badge {
+            padding: 0 15px;
+            height: 37px;
+            font-size: 18px;
+            bottom: 10px;
+            left: 10px;
+        }
+        &__title {
+            font-size: 18px;
+            margin-top: 15px;
+        }
+        &__info {
+            margin-top: 10px;
+        }
+        &__more {
+            font-size: 14px;
+            margin-top: 15px;
+            svg {
+                width: 18px;
+                height: auto;
+            }
+        }
+        &__bottom {
+            flex-wrap: wrap;
+        }
+        &__btn {
+            font-size: 16px;
+            height: 60px;
+            width: 100%;
+            padding: 0;
+        }
+        &__link {
+            font-size: 16px;
+            margin: 0 0 20px;
+            display: block;
+            order: -1;
+        }
+    }
+    .promo-contact {
+        padding: 30px 15px;
+        border-radius: 20px;
+        &__title {
+            font-size: 24px;
+        }
+        &__desc {
+            margin-top: 15px;
+            a {
+                display: block;
+            }
+            p {
+                display: inline;
+                font-size: 16px;
+            }
+        }
+        &__form {
+            margin-top: 25px;
+            display: block;
+            &-group {
+                width: 100%;
+                margin: 0 0 10px;
+                input {
+                    height: 60px;
+                }
+            }
+        }
+        &__btn {
+            height: 60px;
+            width: 100%;
+            font-size: 16px;
+        }
+        &__agree {
+            br {
+                display: unset;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .promo {
+        padding: 20px 0 15px;
+        &__title {
+            .rect1 {
+                margin-left: 20px;
+            }
+            .rect2 {
+                margin-left: 3px;
+            }
+        }
+        &__desc {
+            font-size: 14px;
+        }
+        &__inner {
+            margin-top: 20px;
+        }
+        &__right {
+            margin-top: 40px;
+        }
+    }
+    .promo-card {
+        padding: 15px;
+        border-radius: 20px;
+        &__img {
+            height: 130px;
+            img {
+                border-radius: 15px;
+            }
+        }
+        &__badge {
+            height: 35px;
+            font-size: 16px;
+        }
+        &__title {
+            font-size: 16px;
+        }
+        &__info {
+            margin-top: 10px;
+            p {
+                font-size: 13px;
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+            }
+            ul {
+                li {
+                    font-size: 13px;
+                    &:not(:last-child) {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+        &__bottom {
+            margin-top: 15px;
+        }
+        &__btn {
+            font-size: 15px;
+            height: 57px;
+            width: 100%;
+        }
+        &__link {
+            font-size: 15px;
+        }
+    }
+    .promo-contact {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        &__title {
+            font-size: 20px;
+        }
+        &__desc {
+            margin-top: 10px;
+            a {
+                font-size: 18px;
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+        &__form {
+            margin-top: 20px;
+            &-group {
+                input {
+                    height: 57px;
+                }
+            }
+        }
+        &__btn {
+            height: 57px;
+            font-size: 15px;
+        }
+        &__agree {
+            font-size: 11px;
+        }
+    }
+}

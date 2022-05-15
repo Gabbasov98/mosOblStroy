@@ -2,6 +2,216 @@
 @import 'mixins';
 .modal-backdrop {
     &.show {
-        opacity: 0.7;
+        background: #012033;
+        opacity: 0.5;
+    }
+}
+
+.modal {
+    &.show {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+    &-dialog {
+        max-width: 470px;
+        background: $greyBg;
+        border-radius: 30px;
+        padding: 50px 60px 60px;
+        pointer-events: unset;
+    }
+    &__close {
+        background-color: transparent;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        &:hover {
+            g {
+                opacity: 1;
+            }
+        }
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 130%;
+    }
+    &__desc {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 120%;
+        margin-top: 15px;
+        max-width: 250px;
+    }
+    &__form {
+        margin-top: 30px;
+        &-group {
+            margin-bottom: 15px;
+            textarea {
+                height: 140px;
+            }
+        }
+    }
+    &__btn {
+        height: 65px;
+        width: 100%;
+        font-weight: 400;
+        border-radius: 13px;
+    }
+    &__agree {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 150%;
+        background: linear-gradient(180deg, #00609A 0%, #1B3646 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        margin-top: 15px;
+        a {
+            border-bottom: 1px solid $blue;
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    @media screen and (min-width: 1280px) {
+        .modal {
+            &__close {
+                right: unset;
+                top: unset;
+                left: 100%;
+                bottom: 100%;
+                margin-left: 5px;
+                g {
+                    opacity: .8;
+                }
+                path {
+                    stroke: #fff;
+                }
+            }
+            &-dialog {
+                max-width: 370px;
+                padding: 40px 40px 35px;
+            }
+            &__title {
+                font-size: 26px;
+            }
+            &__form {
+                margin-top: 20px;
+                &-group {
+                    margin-bottom: 10px;
+                }
+            }
+            &__btn {
+                height: 57px;
+                font-size: 15px;
+            }
+            &__agree {
+                font-size: 12px;
+            }
+            &__desc {
+                font-size: 15px;
+                margin-top: 10px;
+                max-width: 235px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .modal {
+        &__close {
+            right: unset;
+            top: unset;
+            left: 100%;
+            bottom: 100%;
+            margin-left: 5px;
+            g {
+                opacity: .8;
+            }
+            path {
+                stroke: #fff;
+            }
+        }
+        &-dialog {
+            max-width: 370px;
+            padding: 40px 40px 35px;
+        }
+        &__title {
+            font-size: 26px;
+        }
+        &__form {
+            margin-top: 20px;
+            &-group {
+                margin-bottom: 10px;
+            }
+        }
+        &__btn {
+            height: 57px;
+            font-size: 15px;
+        }
+        &__agree {
+            font-size: 12px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .modal {
+        &-dialog {
+            border-radius: 20px;
+            padding: 30px;
+            width: 370px;
+            max-width: calc(100% - 30px);
+        }
+        &__close {
+            margin-left: 0;
+            left: unset;
+            right: 0;
+            margin-bottom: 10px;
+        }
+        &__title {
+            font-size: 24px;
+        }
+        &__form {
+            margin-top: 15px;
+            &-group {
+                input {
+                    height: 60px;
+                }
+            }
+        }
+        &__btn {
+            height: 60px;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .modal {
+        &-dialog {
+            padding: 25px 15px;
+        }
+        &__title {
+            font-size: 20px;
+        }
+        &__form {
+            margin-top: 20px;
+            &-group {
+                input {
+                    height: 57px;
+                }
+                textarea {
+                    height: 120px;
+                }
+            }
+        }
+        &__btn {
+            height: 57px;
+        }
+        &__agree {
+            font-size: 11px;
+        }
     }
 }

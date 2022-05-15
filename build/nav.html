@@ -1,4 +1,4 @@
-<!DOCTYPE html> <html lang="en">
+<!DOCTYPE html> <html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
     <meta name="keywords" content="">
     <link rel="stylesheet" href="css/libs.min.css">
     <link rel="stylesheet" href="css/style.min.css">
-    <title>Навигация</title>
+    <title>Главная</title>
 </head>
 
 
@@ -18,77 +18,176 @@
     
     .wrapper button {
         margin-bottom: 25px;
-        width: 300px;
-        height: 45px;
+        min-width: 300px;
+        max-width: 400px;
+        padding: 0 50px;
+        height: 65px;
     }
 </style>
 
 <body>
 
     <div class="wrapper" style="padding: 50px;">
-        <a href="login.html" style="display: block; margin-bottom: 20px;">
-            Авторизация
+        <a href="index.html" style="display: block; margin-bottom: 20px;">
+            Главная
         </a>
-        <a href="recover-password.html" style="display: block; margin-bottom: 20px;">
-            Восстановление пароля
+        <a href="catalog.html" style="display: block; margin-bottom: 20px;">
+            Каталог
         </a>
-        <a href="recover-password-success.html" style="display: block; margin-bottom: 20px;">
-            Восстановление пароля 2
+        <a href="catalog2.html" style="display: block; margin-bottom: 20px;">
+            Каталог 2
         </a>
-        <a href="recover-password-mail.html" style="display: block; margin-bottom: 20px;">
-            Восстановление пароля 3
+        <a href="favourite.html" style="display: block; margin-bottom: 20px;">
+            Избранное
         </a>
-        <a href="create-new-password.html" style="display: block; margin-bottom: 20px;">
-            Создание нового пароля
+        <a href="catalog-item.html" style="display: block; margin-bottom: 20px;">
+            Карточка товара
         </a>
-        <a href="create-new-password-success.html" style="display: block; margin-bottom: 20px;">
-            Создание нового пароля 2
+        <a href="promo.html" style="display: block; margin-bottom: 20px;">
+            Акции
         </a>
-        <a href="create-new-password-mail.html" style="display: block; margin-bottom: 20px;">
-            Создание нового пароля 3
+        <a href="contacts.html" style="display: block; margin-bottom: 20px;">
+            Контакты
         </a>
-        <a href="reg-complete.html" style="display: block; margin-bottom: 20px;">
-            Регистрация завершена
+        <a href="contacts2.html" style="display: block; margin-bottom: 20px;">
+            Контакты 2
         </a>
-        <a href="users.html" style="display: block; margin-bottom: 20px;">
-            Управление пользователями 
+        <a href="promo.html" style="display: block; margin-bottom: 20px;">
+            Услуги
         </a>
-        <a href="parsers.html" style="display: block; margin-bottom: 20px;">
-            Управление парсерами
+        <a href="news.html" style="display: block; margin-bottom: 20px;">
+            Новости
         </a>
-        <a href="settings.html" style="display: block; margin-bottom: 20px;">
-            Настройки
+        <a href="categories.html" style="display: block; margin-bottom: 20px;">
+            Категории
         </a>
-        <a href="system-settings.html" style="display: block; margin-bottom: 20px;">
-            Системные данные
+        <a href="requirements.html" style="display: block; margin-bottom: 20px;">
+            Технические требования
         </a>
-        <a href="projects-empty.html" style="display: block; margin-bottom: 20px;">
-            Проекты > Нет проектов
+        <a href="cases.html" style="display: block; margin-bottom: 20px;">
+            Кейсы
         </a>
-        <a href="projects-empty2.html" style="display: block; margin-bottom: 20px;">
-            Проекты > Нет непрочитанных публикаций
+        <a href="feedback.html" style="display: block; margin-bottom: 20px;">
+            Отзывы
         </a>
-        <a href="projects-empty3.html" style="display: block; margin-bottom: 20px;">
-            Проекты > Все уведомления прочитаны
+        <a href="news-item.html" style="display: block; margin-bottom: 20px;">
+            Новость
         </a>
-        <a href="projects.html" style="display: block; margin-bottom: 20px;">
-            Проекты > Проект
+        <a href="news-item2.html" style="display: block; margin-bottom: 20px;">
+            Новость 2
         </a>
-        <a href="projects-edit.html" style="display: block; margin-bottom: 20px;">
-            Проекты > Проект [Редактирование]
+        <a href="news-item3.html" style="display: block; margin-bottom: 20px;">
+            Новость 3
         </a>
-        <a href="projects-publish.html" style="display: block; margin-bottom: 20px;">
-            Проекты > Проект > Публикация
-        </a>
-        <a href="projects-publish2.html" style="display: block; margin-bottom: 20px;">
-            Проекты > Проект > Публикация [[Publication.gov.ru]] [Значимое] 
-        </a>
-        <a href="projects-source.html" style="display: block; margin-bottom: 20px;">
-            Projects > Source
-        </a>
+
+
+        <button style="border: 2px solid #000;margin-bottom: 20px;" data-bs-toggle="modal" data-bs-target="#modal1">
+            Заявка на бесплатную консультацию
+        </button>
+        <button style="border: 2px solid #000;margin-bottom: 20px;" data-bs-toggle="modal" data-bs-target="#modal2">
+            Запросить стоимость размещения рекламы
+        </button>
+        <button style="border: 2px solid #000;margin-bottom: 20px;" data-bs-toggle="modal" data-bs-target="#modal3">
+            Забронировать рекламу
+        </button>
+
     </div>
 
+    <div class="modal  fade" id="modal1" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <button type="button" class="modal__close" data-bs-dismiss="modal" aria-label="Close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.3">
+                <path d="M5 5L19 19M19 5L5 19" stroke="#002B45" stroke-width="2" stroke-linecap="round"/>
+                </g>
+            </svg>
+        </button>
+        <div class="modal__title">Заявка на бесплатную консультацию</div>
+        <form action="" class="modal__form">
+            <fieldset class='modal__form-group form-group'>
+                <input type='text' placeholder="Имя" />
+            </fieldset>
+            <fieldset class='modal__form-group form-group'>
+                <input type='text' placeholder="Телефон" />
+            </fieldset>
+            <fieldset class='modal__form-group form-group'>
+                <input type='text' placeholder="Email" />
+            </fieldset>
+            <button class="modal__btn btn btn-orange">Отправить заявку</button>
+            <div class="modal__agree">
+                Нажимая на кнопку, я соглашаюсь с условиями
+                <a href="">Политики конфиденциальности</a>
+            </div>
+        </form>
+    </div>
+</div>
 
+<div class="modal fade" id="modal2" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <button type="button" class="modal__close" data-bs-dismiss="modal" aria-label="Close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.3">
+                <path d="M5 5L19 19M19 5L5 19" stroke="#002B45" stroke-width="2" stroke-linecap="round"/>
+                </g>
+            </svg>
+        </button>
+        <div class="modal__title">Запросить стоимость размещения рекламы</div>
+        <div class="modal__desc">Наш менеджер свяжется с вами в течение 5 минут</div>
+        <form action="" class="modal__form">
+            <fieldset class='modal__form-group form-group'>
+                <input type='text' placeholder="Имя" />
+            </fieldset>
+            <fieldset class='modal__form-group form-group'>
+                <input type='text' placeholder="Телефон" />
+            </fieldset>
+            <fieldset class='modal__form-group form-group'>
+                <input type='text' placeholder="Email" />
+            </fieldset>
+            <fieldset class='modal__form-group form-group'>
+                <textarea placeholder="Дополнительные пожелания"></textarea>
+            </fieldset>
+            <button class="modal__btn btn btn-orange">Отправить заявку</button>
+            <div class="modal__agree">
+                Нажимая на кнопку, я соглашаюсь с условиями
+                <a href="">Политики конфиденциальности</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal  fade" id="modal3" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <button type="button" class="modal__close" data-bs-dismiss="modal" aria-label="Close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.3">
+                <path d="M5 5L19 19M19 5L5 19" stroke="#002B45" stroke-width="2" stroke-linecap="round"/>
+                </g>
+            </svg>
+        </button>
+        <div class="modal__title">Забронировать рекламу</div>
+        <form action="" class="modal__form">
+            <fieldset class='modal__form-group form-group'>
+                <input type='text' placeholder="Имя" />
+            </fieldset>
+            <fieldset class='modal__form-group form-group'>
+                <input type='text' placeholder="Телефон" />
+            </fieldset>
+            <fieldset class='modal__form-group form-group'>
+                <input type='text' placeholder="Email" />
+            </fieldset>
+            <button class="modal__btn btn btn-orange">Отправить заявку</button>
+            <div class="modal__agree">
+                Нажимая на кнопку, я соглашаюсь с условиями
+                <a href="">Политики конфиденциальности</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- <div class="modal-backdrop show"></div> -->
+    <!--  -->
+    <script src="js/libs.min.js"></script>
+<script src="js/main.min.js"></script>
 
 </body>
 

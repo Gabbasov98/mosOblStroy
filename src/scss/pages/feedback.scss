@@ -1,0 +1,299 @@
+@import "../vars.scss";
+.feedback {
+    padding: 50px 60px 60px;
+    width: 1920px;
+    max-width: 100%;
+    margin: 0 auto;
+    &__inner {
+        padding: 90px 180px 120px;
+        width: 100%;
+        border-radius: 60px;
+        background-color: $greyBg;
+    }
+    &__title {
+        .rect {
+            width: 9px;
+            height: 9px;
+            transform: rotate(-45deg) translateY(-15px);
+        }
+        .rect1 {
+            margin-left: 130px;
+        }
+    }
+    &__items {
+        margin-top: 75px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px 20px;
+    }
+    &__more {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 100px auto 0;
+        font-size: 18px;
+        svg {
+            margin-right: 10px;
+        }
+    }
+}
+
+.feedback-card {
+    position: relative;
+    &__img {
+        &-block {
+            // height: 475px;
+        }
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+        }
+    }
+    &__title {
+        display: block;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 140%;
+        margin-top: 15px;
+    }
+    .resize-img {
+        height: 100%;
+        &--active {
+            height: unset;
+            width: 500px;
+            img {
+                height: auto;
+            }
+        }
+        &__btn {
+            width: 40px;
+            height: 40px;
+            bottom: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 1840px) {
+    .feedback {
+        padding: 50px 50px 60px;
+        &__inner {
+            padding: 80px 100px;
+        }
+        &__items {
+            margin-top: 40px;
+        }
+        &__more {
+            margin-top: 60px;
+        }
+    }
+    .feedback-card {
+        &__img {
+            &-block {
+                // height: 400px;
+            }
+        }
+        &__title {
+            font-size: 20px;
+            margin-top: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .feedback {
+        &__inner {
+            padding: 70px 100px;
+            border-radius: 40px;
+        }
+        &__title {
+            .rect1 {
+                margin-left: 100px;
+            }
+        }
+        &__more {
+            margin-top: 40px;
+            font-size: 16px;
+        }
+        &__items {
+            gap: 30px 20px;
+        }
+    }
+    .feedback-card {
+        &__img {
+            &-block {
+                // height: 320px;
+            }
+        }
+        &__title {
+            font-size: 18px;
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .feedback {
+        padding: 40px;
+        &__inner {
+            padding: 60px 50px 80px;
+        }
+        &__title {
+            .rect {
+                transform: rotate(-45deg) translateY(-11px);
+            }
+            .rect1 {
+                margin-left: 30px;
+            }
+        }
+        &__more {
+            margin-top: 60px;
+            font-size: 18px;
+        }
+        &__items {
+            grid-template-columns: 1fr 1fr 1fr;
+            margin-top: 50px;
+        }
+    }
+    .feedback-card {
+        &__title {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        .resize-img--active {
+            width: 400px;
+        }
+        @media screen and (min-width: 768px) {
+            &:nth-child(3n - 2) {
+                .resize-img--active {
+                    left: 0;
+                    transform: translate(0, -50%);
+                }
+            }
+            &:nth-child(3n) {
+                .resize-img--active {
+                    left: unset;
+                    right: 0;
+                    transform: translate(0, -50%);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .feedback {
+        padding: 30px 30px 35px;
+        &__inner {
+            padding: 50px 30px;
+            border-radius: 30px;
+        }
+        &__title {
+            .rect {
+                transform: rotate(-45deg) translateY(-7px);
+            }
+        }
+        &__more {
+            margin-top: 35px;
+            font-size: 16px;
+        }
+        &__items {
+            margin-top: 35px;
+            gap: 20px;
+        }
+    }
+    .feedback-card {
+        .resize-img {
+            &__btn {
+                width: 32px;
+                height: 32px;
+                bottom: 10px;
+            }
+        }
+        &__title {
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .feedback {
+        padding: 30px 15px 25px;
+        &__inner {
+            padding: 30px 15px 35px;
+            border-radius: 20px;
+        }
+        &__title {
+            .rect {
+                width: 6px;
+                height: 6px;
+                display: none;
+            }
+        }
+        &__more {
+            margin-top: 25px;
+        }
+        &__items {
+            margin-top: 25px;
+            gap: 10px;
+            @media screen and (max-width: 600px) {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        &__item {
+            &:nth-child(odd) {
+                .resize-img--active {
+                    left: 0;
+                    transform: translate(0, -50%);
+                }
+            }
+            &:nth-child(even) {
+                .resize-img--active {
+                    left: unset;
+                    right: 0;
+                    transform: translate(0, -50%);
+                }
+            }
+        }
+    }
+    .feedback-card {
+        &__img {
+            img {
+                border-radius: 10px;
+            }
+        }
+        &__title {
+            font-size: 14px;
+        }
+        .resize-img--active {
+            width: 260px;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .feedback {
+        padding: 20px 15px 20px;
+        &__inner {
+            padding: 20px 15px 30px;
+        }
+        &__more {
+            margin-top: 36px;
+        }
+        &__items {
+            margin-top: 15px;
+            gap: 25px 10px;
+        }
+    }
+    .feedback-card {
+        &__img {
+            position: static;
+        }
+        &__title {
+            font-size: 13px;
+        }
+        .resize-img--active {
+            position: absolute;
+        }
+    }
+}

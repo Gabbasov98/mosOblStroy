@@ -1,0 +1,1105 @@
+@import "../vars.scss";
+.contacts {
+    padding: 50px 0 45px;
+    &__title {
+        .rect {
+            width: 9px;
+            height: 9px;
+            transform: rotate(-45deg) translateY(-15px);
+        }
+        .rect1 {
+            margin-left: 60px;
+        }
+        .rect2 {
+            margin-left: 2px;
+        }
+    }
+    &__buttons {
+        margin-top: 60px;
+        display: flex;
+        align-items: center;
+    }
+    &__btn {
+        padding: 0 47px;
+        margin-right: 20px;
+        height: 65px;
+        border-radius: 13px;
+        font-weight: 400;
+        font-size: 16px;
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+    }
+    &__left {
+        width: 607px;
+        flex-shrink: 0;
+    }
+    &__right {
+        width: calc(100% - 673px);
+        margin-left: 66px;
+    }
+    &__item {
+        display: flex;
+        &:not(:last-child) {
+            margin-bottom: 35px;
+        }
+        &-icon {
+            width: 30px;
+            flex-shrink: 0;
+            margin-right: 20px;
+            padding-top: 2px;
+            img {
+                width: 100%;
+            }
+        }
+        &-info {
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 150%;
+            opacity: 0.8;
+        }
+    }
+    &__map {
+        width: calc(100% + 180px);
+        height: 400px;
+        border-radius: 20px;
+        overflow: hidden;
+        .ymaps-2-1-79-gototaxi,
+        .ymaps-2-1-79-gotoymaps,
+        .ymaps-2-1-79-gototech,
+        .ymaps-2-1-79-scaleline,
+        .ymaps-2-1-79-copyright__layout,
+        .ymaps-2-1-79-zoom,
+        .ymaps-2-1-79-float-button,
+        .ymaps-2-1-79-listbox__button {
+            display: none;
+        }
+        &--small {
+            width: 100%;
+        }
+    }
+    &__wrap {
+        display: grid;
+        grid-template-columns: repeat(2, calc(50% - 32.5px));
+        gap: 75px;
+        width: 1365px;
+        max-width: 100%;
+        margin-top: 50px;
+    }
+    &__info {
+        &-title {
+            font-weight: 600;
+            font-size: 26px;
+            line-height: 150%;
+        }
+        &-items {
+            margin: 40px 0 50px;
+        }
+        &-item {
+            display: flex;
+            color: rgba($blue, .8);
+            &:not(:last-child) {
+                margin-bottom: 35px;
+            }
+            img {
+                width: 30px;
+                height: 30px;
+                margin-right: 20px;
+                flex-shrink: 0;
+            }
+        }
+        &-subtitle {
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 150%;
+        }
+        &-desc {
+            max-width: 430px;
+            margin-top: 10px;
+            font-size: 18px;
+            line-height: 150%;
+        }
+    }
+}
+
+.workers {
+    padding: 45px 60px 20px;
+    &__inner {
+        background-color: $greyBg;
+        padding: 90px 180px;
+        border-radius: 60px;
+        width: 1800px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    &__group {
+        &:not(:last-child) {
+            margin-bottom: 70px;
+        }
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 130%;
+    }
+    &__items {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px 35px;
+        max-width: 1200px;
+    }
+}
+
+.worker-card {
+    display: flex;
+    align-items: center;
+    &__img {
+        border: 2px solid rgba(0, 96, 154, 0.1);
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 30px;
+        flex-shrink: 0;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 150%;
+        display: block;
+    }
+    &__mail {
+        display: flex;
+        margin-top: 15px;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 150%;
+        span {
+            word-wrap: break-word;
+        }
+        img {
+            margin-right: 20px;
+            flex-shrink: 0;
+            display: block;
+        }
+    }
+}
+
+.consult2 {
+    padding: 20px 60px 60px;
+    &__inner {
+        background-color: $greyBg;
+        padding: 90px 180px;
+        border-radius: 60px;
+        width: 1800px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    &__top {
+        display: flex;
+    }
+    &__group2 {
+        margin-left: 195px;
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 130%;
+    }
+    &__mail {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 150%;
+        margin-top: 40px;
+        img {
+            margin-right: 20px;
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+    }
+    &__form {
+        margin-top: 60px;
+        max-width: 865px;
+        &-title {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 130%;
+        }
+        &-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 25px;
+        }
+        &-group {
+            &--full {
+                grid-column: 1/4;
+            }
+        }
+    }
+    &__btn {
+        height: 65px;
+        border-radius: 13px;
+    }
+    &__agree {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 150%;
+        background: linear-gradient(180deg, #00609A 0%, #1B3646 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        grid-column: 2/4;
+        padding-top: 13px;
+        a {
+            border-bottom: 1px solid $blue;
+            &:hover {
+                border-color: transparent;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1840px) {
+    .contacts {
+        padding-bottom: 32px;
+        &__buttons {
+            margin-top: 40px;
+        }
+        &__inner {
+            margin-top: 40px;
+        }
+        &__left {
+            width: 440px;
+        }
+        &__right {
+            width: calc(100% - 476px);
+            margin-left: 36px;
+        }
+        &__item {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+            &-info {
+                font-size: 18px;
+            }
+        }
+        &__map {
+            width: calc(100% + 100px);
+            height: 340px;
+            &--small {
+                width: 100%;
+            }
+        }
+        &__wrap {
+            display: grid;
+            grid-template-columns: repeat(2, calc(50% - 27.5px));
+            gap: 55px;
+            margin-top: 40px;
+            width: 1085px;
+        }
+        &__info {
+            &-title {
+                font-size: 22px;
+            }
+            &-items {
+                margin: 30px 0;
+            }
+            &-item {
+                &:not(:last-child) {
+                    margin-bottom: 25px;
+                }
+            }
+            &-subtitle {
+                font-size: 18px;
+            }
+            &-desc {
+                margin-top: 8px;
+                font-size: 16px;
+            }
+        }
+    }
+    .workers {
+        padding: 32px 50px 20px;
+        &__inner {
+            padding: 70px 100px;
+        }
+        &__group {
+            &:not(:last-child) {
+                margin-bottom: 50px;
+            }
+        }
+        &__title {
+            font-size: 34px;
+        }
+        &__items {
+            grid-template-columns: 1fr 1fr;
+            gap: 30px 98px;
+        }
+    }
+    .worker-card {
+        &__img {
+            width: 75px;
+            height: 75px;
+            margin-right: 20px;
+        }
+        &__title {
+            font-size: 22px;
+        }
+        &__mail {
+            margin-top: 13px;
+            font-size: 18px;
+            img {
+                margin-right: 15px;
+            }
+        }
+    }
+    .consult2 {
+        padding: 20px 50px 50px;
+        &__inner {
+            padding: 70px 100px;
+        }
+        &__group2 {
+            margin-left: 123px;
+        }
+        &__title {
+            font-size: 34px;
+        }
+        &__mail {
+            font-size: 18px;
+            margin-top: 33px;
+            img {
+                margin-right: 15px;
+                margin-top: -2px;
+            }
+        }
+        &__form {
+            margin-top: 50px;
+            max-width: 810px;
+            &-title {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .contacts {
+        padding: 40px 0 25px;
+        &__btn {
+            height: 57px;
+            font-size: 15px;
+        }
+        &__left {
+            width: 365px;
+        }
+        &__right {
+            width: calc(100% - 410px);
+            margin-left: 45px;
+        }
+        &__item {
+            &:not(:last-child) {
+                margin-bottom: 35px;
+            }
+            &-icon {
+                width: 24px;
+                margin-right: 15px;
+            }
+            &-info {
+                font-size: 16px;
+            }
+        }
+        &__map {
+            &--small {
+                height: 300px;
+            }
+        }
+        &__wrap {
+            grid-template-columns: repeat(2, calc(50% - 20px));
+            gap: 40px;
+            width: 950px;
+        }
+        &__info {
+            &-title {
+                font-size: 18px;
+            }
+            &-item {
+                img {
+                    width: 24px;
+                    height: 24px;
+                    margin-right: 15px;
+                }
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+            }
+            &-subtitle {
+                font-size: 16px;
+            }
+            &-desc {
+                margin-top: 5px;
+                font-size: 15px;
+            }
+        }
+    }
+    .workers {
+        padding: 25px 50px 15px;
+        &__inner {
+            padding: 60px 100px;
+            border-radius: 40px;
+        }
+        &__group {
+            &:not(:last-child) {
+                margin-bottom: 40px;
+            }
+        }
+        &__title {
+            font-size: 30px;
+        }
+        &__items {
+            grid-template-columns: 1fr 1fr;
+            gap: 25px 70px;
+        }
+    }
+    .worker-card {
+        &__img {
+            width: 70px;
+            height: 70px;
+        }
+        &__title {
+            font-size: 18px;
+        }
+        &__mail {
+            margin-top: 5px;
+            font-size: 16px;
+            img {
+                margin-right: 10px;
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+    .consult2 {
+        padding: 15px 50px 55px;
+        &__inner {
+            padding: 60px 100px;
+            border-radius: 40px;
+        }
+        &__group2 {
+            margin-left: 96px;
+        }
+        &__title {
+            font-size: 30px;
+        }
+        &__mail {
+            font-size: 16px;
+            margin-top: 20px;
+            img {
+                margin-right: 10px;
+                margin-top: 0px;
+                width: 24px;
+                height: 24px;
+            }
+        }
+        &__form {
+            margin-top: 40px;
+            max-width: 750px;
+            &-title {
+                font-size: 20px;
+            }
+        }
+        &__btn {
+            height: 57px;
+        }
+        &__agree {
+            padding-top: 11px;
+            font-size: 12px;
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .contacts {
+        padding-bottom: 30px;
+        &__btn {
+            height: 65px;
+            font-size: 16px;
+        }
+        &__inner {
+            margin-top: 50px;
+            display: block;
+        }
+        &__left {
+            width: 100%;
+        }
+        &__right {
+            width: 100%;
+            margin: 30px 0 0;
+        }
+        &__items {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 30px;
+        }
+        &__item {
+            &:nth-child(1) {
+                grid-column: 1/4;
+            }
+            &:not(:last-child) {
+                margin-bottom: 0;
+            }
+            @media screen and (min-width: 992px) {
+                &:nth-child(2) {
+                    grid-column: 4/7;
+                }
+                &:nth-child(3) {
+                    grid-column: 1/3;
+                }
+                &:nth-child(4) {
+                    grid-column: 3/5;
+                }
+                &:nth-child(5) {
+                    grid-column: 5/7;
+                }
+            }
+            a {
+                display: block;
+                line-height: 150%;
+            }
+            &-icon {
+                width: 30px;
+                margin-right: 20px;
+            }
+            &-info {
+                font-size: 20px;
+            }
+        }
+        &__map {
+            width: 100%;
+            height: 400px;
+        }
+        &__wrap {
+            grid-template-columns: 100%;
+            gap: 50px;
+            width: 100%;
+            margin-top: 30px;
+        }
+        &__info {
+            &-title {
+                font-size: 24px;
+            }
+            &-items {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+            &-item {
+                &:not(:last-child) {
+                    margin-bottom: 0px;
+                }
+            }
+            &-subtitle {
+                font-size: 20px;
+                span {
+                    display: block;
+                }
+            }
+            &-desc {
+                font-size: 16px;
+                margin-top: 10px;
+            }
+        }
+    }
+    .workers {
+        padding: 30px 40px 15px;
+        &__inner {
+            padding: 60px 50px;
+        }
+        &__group {
+            &:not(:last-child) {
+                margin-bottom: 32px;
+            }
+        }
+        &__title {
+            font-size: 32px;
+        }
+        &__items {
+            grid-template-columns: 1fr 1fr;
+            gap: 35px 15px;
+        }
+    }
+    .worker-card {
+        &__img {
+            width: 80px;
+            height: 80px;
+            margin-right: 30px;
+        }
+        &__title {
+            font-size: 24px;
+        }
+        &__mail {
+            margin-top: 10px;
+            font-size: 20px;
+            img {
+                margin-right: 15px;
+                width: 30px;
+                height: 30px;
+                margin-top: 3px;
+            }
+        }
+    }
+    .consult2 {
+        padding: 15px 40px 55px;
+        &__inner {
+            padding: 60px 50px 225px;
+            position: relative;
+        }
+        &__group2 {
+            position: absolute;
+            left: 50px;
+            bottom: 63px;
+            margin: 0;
+        }
+        &__title {
+            font-size: 32px;
+        }
+        &__mail {
+            font-size: 20px;
+            margin-top: 30px;
+            img {
+                margin-right: 20px;
+                width: 30px;
+                height: 30px;
+            }
+        }
+        &__form {
+            max-width: 100%;
+            &-title {
+                font-size: 24px;
+            }
+            &-group {
+                textarea {
+                    height: 165px;
+                }
+            }
+        }
+        &__btn {
+            height: 65px;
+        }
+        &__agree {
+            padding-top: 13px;
+            font-size: 13px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .contacts {
+        padding: 30px 0 25px;
+        &__buttons {
+            margin-top: 35px;
+        }
+        &__btn {
+            height: 57px;
+            font-size: 15px;
+        }
+        &__inner {
+            margin-top: 30px;
+        }
+        &__right {
+            margin-top: 40px;
+        }
+        &__items {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+        &__item {
+            &:nth-child(1) {
+                grid-column: 1/3;
+            }
+            a {
+                display: block;
+                line-height: 150%;
+            }
+            &-icon {
+                width: 24px;
+                margin-right: 15px;
+            }
+            &-info {
+                font-size: 16px;
+            }
+        }
+        &__map {
+            height: 350px;
+        }
+        &__wrap {
+            gap: 40px;
+            margin-top: 30px;
+        }
+        &__info {
+            &-items {
+                gap: 40px;
+            }
+            &-title {
+                font-size: 18px;
+            }
+            &-subtitle {
+                font-size: 16px;
+            }
+            &-desc {
+                font-size: 14px;
+                margin-top: 5px;
+            }
+        }
+    }
+    .workers {
+        padding: 25px 40px 10px;
+        &__inner {
+            padding: 40px 30px;
+            border-radius: 30px;
+        }
+        &__group {
+            &:not(:last-child) {
+                margin-bottom: 40px;
+            }
+        }
+        &__title {
+            font-size: 24px;
+        }
+        &__items {
+            grid-template-columns: 100%;
+            gap: 20px;
+        }
+    }
+    .worker-card {
+        &__img {
+            width: 70px;
+            height: 70px;
+            margin-right: 20px;
+        }
+        &__title {
+            font-size: 16px;
+        }
+        &__mail {
+            margin-top: 8px;
+            font-size: 16px;
+            img {
+                margin-right: 10px;
+                width: 24px;
+                height: 24px;
+                margin-top: 0px;
+            }
+        }
+    }
+    .consult2 {
+        padding: 20px 40px 35px;
+        &__inner {
+            padding: 40px 30px 155px;
+            border-radius: 30px;
+        }
+        &__group2 {
+            left: 30px;
+            bottom: 40px;
+        }
+        &__title {
+            font-size: 24px;
+        }
+        &__mail {
+            font-size: 16px;
+            margin-top: 20px;
+            img {
+                margin-right: 10px;
+                width: 24px;
+                height: 24px;
+            }
+        }
+        &__form {
+            margin-top: 20px;
+            &-title {
+                font-size: 18px;
+            }
+            &-group {
+                textarea {
+                    height: 130px;
+                }
+                input {
+                    height: 57px;
+                }
+            }
+        }
+        &__btn {
+            height: 57px;
+            font-size: 15px;
+        }
+        &__agree {
+            padding-top: 12px;
+            font-size: 11px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contacts {
+        padding-bottom: 15px;
+        &__title {
+            .rect {
+                transform: rotate(-45deg) translateY(-3px);
+            }
+            .rect1 {
+                margin-left: 30px;
+            }
+        }
+        &__buttons {
+            margin-top: 25px;
+        }
+        &__btn {
+            height: 60px;
+            padding: 0;
+            font-size: 16px;
+            margin-right: 10px;
+            width: calc(50% - 5px);
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        &__right {
+            margin-top: 30px;
+        }
+        &__items {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 15px;
+        }
+        &__item {
+            &:nth-child(1) {
+                grid-column: 1/2;
+            }
+            a {
+                display: unset;
+            }
+            &-icon {
+                margin-right: 10px;
+            }
+            &-info {
+                font-size: 16px;
+            }
+        }
+        &__map {
+            height: 400px;
+        }
+        &__wrap {
+            gap: 30px;
+        }
+        &__info {
+            &-items {
+                margin-top: 20px;
+                gap: 20px;
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+    .workers {
+        padding: 15px 15px 10px;
+        &__inner {
+            padding: 30px 15px;
+            border-radius: 20px;
+        }
+        &__group {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+        &__title {
+            font-size: 20px;
+        }
+        &__items {
+            gap: 15px;
+        }
+    }
+    .worker-card {
+        align-items: flex-start;
+        &__img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            border-width: 1px;
+        }
+        &__title {
+            font-size: 16px;
+        }
+        &__mail {
+            margin-top: 5px;
+            img {
+                margin-right: 8px;
+            }
+        }
+    }
+    .consult2 {
+        padding: 10px 15px 25px;
+        &__inner {
+            padding: 30px 15px 135px;
+            border-radius: 20px;
+        }
+        &__group2 {
+            left: 15px;
+            bottom: 30px;
+        }
+        &__title {
+            font-size: 20px;
+        }
+        &__mail {
+            margin-top: 25px;
+            img {
+                margin-right: 8px;
+            }
+        }
+        &__form {
+            margin-top: 30px;
+            &-title {
+                font-size: 18px;
+            }
+            &-grid {
+                margin-top: 15px;
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            &-group {
+                &--full {
+                    grid-column: 1/2;
+                }
+                textarea {
+                    height: 200px;
+                }
+                input {
+                    height: 60px;
+                }
+            }
+        }
+        &__btn {
+            height: 60px;
+            font-size: 16px;
+        }
+        &__agree {
+            grid-column: 1/2;
+            padding-top: 5px;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .contacts {
+        padding-top: 20px;
+        &__buttons {
+            margin-top: 20px;
+        }
+        &__btn {
+            height: 57px;
+            font-size: 14px;
+        }
+        &__right {
+            margin-top: 20px;
+        }
+        &__items {
+            gap: 20px;
+        }
+        &__item {
+            &-icon {
+                width: 20px;
+            }
+            &-info {
+                font-size: 14px;
+            }
+        }
+        &__info {
+            &-item {
+                img {
+                    margin-right: 10px;
+                }
+            }
+            &-subtitle {
+                font-size: 16px;
+            }
+            &-desc {
+                font-size: 14px;
+            }
+        }
+    }
+    .workers {
+        &__inner {
+            padding: 20px 15px;
+        }
+        &__group {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+        &__title {
+            font-size: 16px;
+        }
+    }
+    .worker-card {
+        &__img {
+            width: 44px;
+            height: 44px;
+        }
+        &__title {
+            font-size: 14px;
+        }
+        &__mail {
+            margin-top: 5px;
+            font-size: 14px;
+            img {
+                margin-right: 5px;
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+    .consult2 {
+        padding-bottom: 15px;
+        &__inner {
+            padding: 20px 15px 111px;
+        }
+        &__title {
+            font-size: 16px;
+        }
+        &__mail {
+            margin-top: 15px;
+            img {
+                margin-right: 7px;
+                width: 20px;
+                height: 20px;
+            }
+        }
+        &__form {
+            margin-top: 25px;
+            &-title {
+                font-size: 14px;
+            }
+            &-group {
+                textarea {
+                    height: 150px;
+                }
+                input {
+                    height: 57px;
+                }
+            }
+        }
+        &__btn {
+            height: 57px;
+            font-size: 15px;
+        }
+        &__agree {
+            font-size: 11px;
+        }
+    }
+}

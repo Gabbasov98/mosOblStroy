@@ -48,9 +48,9 @@
         &-info {
             box-sizing: border-box;
             padding: 0;
-            width: 40px !important;
-            height: 40px;
-            max-width: 40px !important;
+            width: 50px !important;
+            height: 50px;
+            max-width: 50px !important;
             background: #FFFFFF !important;
             box-shadow: 0px 4px 20px -5px rgba(24, 65, 90, 0.2);
             border-radius: 13px !important;
@@ -70,7 +70,7 @@
             transform: translateX(-50%);
         }
         .ymaps-2-1-79-zoom {
-            width: 40px;
+            width: 50px;
             &__scale {
                 display: none;
             }
@@ -91,7 +91,7 @@
         }
         .ymaps-2-1-79-controls__control {
             // transform: translateY(-50%);
-            inset: 188px 10px auto auto !important;
+            inset: 180px 10px auto auto !important;
         }
         .ymaps-2-1-79-controls__toolbar {
             width: 40px;
@@ -589,6 +589,8 @@
         justify-content: center;
         padding: 33px;
         &:hover {
+            z-index: 2;
+            cursor: pointer;
             .companies__item-info {
                 opacity: 1;
             }
@@ -1125,6 +1127,16 @@
                 opacity: 0;
                 pointer-events: none;
             }
+            .ymaps-2-1-79-float-button,
+            &-info {
+                width: 40px !important;
+                height: 40px;
+                max-width: 40px !important;
+                svg {
+                    width: 18px;
+                    height: auto;
+                }
+            }
         }
     }
     .advantages {
@@ -1561,7 +1573,7 @@
             height: 71px;
             border-radius: 10px;
             padding: 20px 12px;
-            @media screen and (min-width: 375px) {
+            @media screen and (min-width: 374px) {
                 &:nth-child(4n - 1), &:nth-child(4n) {
                     .companies__item-info {
                         left: unset;
@@ -1610,7 +1622,7 @@
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 374px) {
     .advantages {
         padding-bottom: 40px;
         &__title {

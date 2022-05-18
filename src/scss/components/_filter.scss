@@ -436,8 +436,8 @@
         }
         &__top {
             margin-bottom: 20px;
-            position: sticky;
-            top: 0;
+            // position: sticky;
+            // top: 0;
             z-index: 2;
             background-color: #fff;
         }
@@ -448,6 +448,7 @@
         }
         &__types {
             display: grid;
+            padding-bottom: 10px;
         }
         &__type {
             margin: 0;
@@ -460,15 +461,21 @@
         }
         &__scroll {
             // padding-right: 11px;
-            @include scroll;
+            @include scroll2;
             overflow-y: auto;
             overflow-x: hidden;
             height: calc(100% - 40px);
         }
     }
+    .filter-item {
+        &__hidden {
+            position: relative;
+            margin-top: -57px;
+        }
+    }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 374px) {
     .config-filter {
         &__types,
         &__types2 {

@@ -13,14 +13,18 @@
             padding-top: 0;
             width: 420px;
             display: grid;
-            grid-template-columns: 1fr 1fr;
             gap: 20px 50px;
             margin-left: 150px;
+            @media screen and (min-width: 768px) {
+                grid-template-columns: 1fr 1fr;
+            }
         }
         &__type {
             margin-left: 0;
-            &:first-child {
-                grid-column: 1/3;
+            @media screen and (min-width: 768px) {
+                &:first-child {
+                    grid-column: 1/3;
+                }
             }
         }
         &__items {
@@ -440,10 +444,12 @@
             position: relative;
             &__types {
                 width: unset;
-                gap: unset;
-                display: flex;
                 margin-left: 0;
                 left: calc(33% + 10px);
+                @media screen and (min-width: 768px) {
+                    gap: unset;
+                    display: flex;
+                }
             }
             &__type {
                 margin-right: 60px;
@@ -964,7 +970,7 @@
         &__month {
             height: 40px;
             font-size: 16px;
-            @media screen and (min-width: 375px) {
+            @media screen and (min-width: 374px) {
                 &:first-child, &:nth-child(2) {
                     &::before {
                         left: 0;
@@ -1091,6 +1097,11 @@
                 margin-right: 3px;
             }
         }
+        // .config-filter__types {
+        //     display: grid;
+        //     gap: 15px;
+        //     grid-template-columns: 1fr;
+        // }
     }
     .catalog-nav {
         &__copy {
@@ -1130,7 +1141,7 @@
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 374px) {
     .catalog-row {
         &__months {
             margin-top: 10px;

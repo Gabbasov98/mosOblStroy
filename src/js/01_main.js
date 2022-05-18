@@ -18,6 +18,7 @@ $(document).ready(function() {
 
     if (window.innerWidth < 767) {
         $(".config-filter__scroll").mCustomScrollbar()
+        $(".news-nav__scroll").mCustomScrollbar()
     }
 
     $(".nav__item").hover(onIn, onOut);

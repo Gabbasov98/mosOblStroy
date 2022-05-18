@@ -25,11 +25,6 @@
     }
     &__info {
         max-width: 250px;
-        background: linear-gradient(180deg, #00609A 0%, #1B3646 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
         font-size: 14px;
         line-height: 180%;
         padding-top: 3px;
@@ -43,11 +38,7 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 180%;
-        background: linear-gradient(180deg, #00609A 0%, #1B3646 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
+        color: $blue;
     }
     &__contacts {
         position: absolute;
@@ -247,7 +238,7 @@
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 374px) {
     .footer {
         padding-bottom: 40px;
         &__mail {

@@ -2,6 +2,9 @@
 .services {
     padding: 50px 60px 40px;
     &__title {
+        padding: 0 180px;
+        max-width: 1800px;
+        margin: 0 auto;
         .rect {
             width: 9px;
             height: 9px;
@@ -94,7 +97,7 @@
 @media screen and (max-width: 1850px) {
     .services {
         padding: 50px 50px 35px;
-        .container {
+        &__title {
             padding: 0 100px;
         }
         &__inner {
@@ -193,7 +196,7 @@
 @media screen and (max-width: 1279px) {
     .services {
         padding: 40px 40px 35px;
-        .container {
+        &__title {
             padding: 0;
         }
         &__title {
@@ -366,7 +369,7 @@
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 374px) {
     .services {
         padding: 20px 15px 15px;
         &__title {

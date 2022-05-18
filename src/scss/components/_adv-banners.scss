@@ -137,6 +137,9 @@
         height: 17px;
         width: 27px;
         font-size: 9px;
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
         &--medium {
             width: 38px;
         }
@@ -153,20 +156,19 @@
             padding: 0 4px;
             height: 13px;
             font-size: 9px;
-            bottom: 13px;
+            bottom: unset;
+            top: 0;
+            transform: translate(-50%, -110%);
         }
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 374px) {
     .adv-banner {
         height: 17px;
         width: 28px;
         font-size: 9px;
         flex-grow: 1;
-        &:not(:last-child) {
-            margin-right: 8px;
-        }
         &--medium {
             width: 35px;
         }

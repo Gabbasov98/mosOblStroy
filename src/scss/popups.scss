@@ -121,19 +121,19 @@
 
 @media screen and (max-width: 992px) {
     .modal {
-        &__close {
-            right: unset;
-            top: unset;
-            left: 100%;
-            bottom: 100%;
-            margin-left: 5px;
-            g {
-                opacity: .8;
-            }
-            path {
-                stroke: #fff;
-            }
-        }
+        // &__close {
+        //     right: unset;
+        //     top: unset;
+        //     left: 100%;
+        //     bottom: 100%;
+        //     margin-left: 5px;
+        //     g {
+        //         opacity: .8;
+        //     }
+        //     path {
+        //         stroke: #fff;
+        //     }
+        // }
         &-dialog {
             max-width: 370px;
             padding: 40px 40px 35px;
@@ -166,10 +166,8 @@
             max-width: calc(100% - 30px);
         }
         &__close {
-            margin-left: 0;
-            left: unset;
-            right: 0;
-            margin-bottom: 10px;
+            top: 10px;
+            right: 10px;
         }
         &__title {
             font-size: 24px;
@@ -188,7 +186,7 @@
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 374px) {
     .modal {
         &-dialog {
             padding: 25px 15px;

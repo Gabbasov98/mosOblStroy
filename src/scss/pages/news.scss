@@ -451,7 +451,7 @@
             overflow-y: auto;
             padding-right: 15px;
             max-height: 355px;
-            @include scroll;
+            @include scroll2;
         }
         &__group {
             &--hidden {
@@ -489,7 +489,7 @@
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 374px) {
     .news {
         padding-top: 20px;
         &__title {

@@ -109,7 +109,7 @@
         font-size: 18px;
         line-height: 150%;
         opacity: 0.8;
-        max-width: 375px;
+        max-width: 374px;
         a {
             font-size: 22px;
             line-height: 150%;
@@ -858,7 +858,7 @@
         &__hint {
             font-size: 18px;
             margin-right: 38px;
-            max-width: 375px;
+            max-width: 374px;
             a {
                 font-size: 22px;
             }
@@ -1258,7 +1258,7 @@
         td {
             font-size: 14px;
             padding: 15px 20px;
-            @media screen and (min-width: 375px) {
+            @media screen and (min-width: 374px) {
                 &:nth-child(1) {
                     padding-right: 5px;
                 }
@@ -1277,7 +1277,7 @@
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 374px) {
     .news-item {
         &__links {
             &-title {

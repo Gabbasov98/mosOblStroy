@@ -14,17 +14,22 @@ function projectsSliders() {
 
 $(document).ready(function() {
     $('input[type="tel"]').mask('+7 999 999-9999', { placeholder: '+7             ' });
+    $(".custom-scroll").mCustomScrollbar()
+
+    if (window.innerWidth < 767) {
+        $(".config-filter__scroll").mCustomScrollbar()
+    }
 
     $(".nav__item").hover(onIn, onOut);
     $(".nav__item-show").click(function() {
-        if ((window.innerWidth < 1220)) {
+        if ((window.innerWidth < 1279)) {
             $(this).parents(".nav__item").toggleClass("nav__item--active")
             $(this).siblings(".nav__item-hidden").slideToggle()
         }
     })
 
     function onIn() {
-        if (window.innerWidth > 1220) {
+        if (window.innerWidth > 1279) {
             let el = $(this)
             setTimeout(function() {
                 if (el.is(':hover')) {
@@ -36,7 +41,7 @@ $(document).ready(function() {
     }
 
     function onOut() {
-        if (window.innerWidth > 1220) {
+        if (window.innerWidth > 1279) {
             $(this).removeClass("nav__item--active")
         }
     }

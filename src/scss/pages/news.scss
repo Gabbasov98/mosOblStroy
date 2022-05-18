@@ -70,8 +70,8 @@
 }
 
 .news-nav {
-    position: sticky;
-    top: 190px;
+    position: relative;
+    // top: 190px;
     &__show {
         display: none;
     }
@@ -154,7 +154,7 @@
     }
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1439px) {
     .news {
         padding: 40px 0 50px;
         &__right {
@@ -190,7 +190,7 @@
     }
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1279px) {
     .news {
         &__inner {
             flex-wrap: wrap;
@@ -361,7 +361,7 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .news {
         &__title {
             .rect {
@@ -432,7 +432,7 @@
         }
         &__hidden {
             z-index: 5;
-            display: block;
+            display: block !important;
             position: absolute;
             left: 0;
             top: 0;

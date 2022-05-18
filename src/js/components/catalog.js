@@ -24,12 +24,12 @@ $(document).ready(function() {
     }
 
 
-    $(".resize-img__btn").click(function() {
-        if ($(this).parents(".resize-img").hasClass("resize-img--active")) {
-            $(this).parents(".resize-img").removeClass("resize-img--active")
+    $(".resize-img").click(function() {
+        if ($(this).hasClass("resize-img--active")) {
+            $(this).removeClass("resize-img--active")
         } else {
             $(".resize-img").removeClass("resize-img--active")
-            $(this).parents(".resize-img").addClass("resize-img--active")
+            $(this).addClass("resize-img--active")
         }
     })
 

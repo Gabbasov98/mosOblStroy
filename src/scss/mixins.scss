@@ -26,3 +26,21 @@
         border-radius: 4px;
     }
 }
+
+@mixin scroll2 {
+    .mCSB_scrollTools {
+        background: transparent;
+        width: 5px !important;
+        height: 100%;
+        // opacity: 0;
+    }
+    .mCSB_draggerRail {
+        width: 5px;
+        background: transparent;
+    }
+    .mCSB_dragger_bar {
+        background: $orange !important;
+        border-radius: 4px !important;
+        width: 5px !important;
+    }
+}

@@ -74,6 +74,11 @@
             }
         }
     }
+    &--month {
+        .filter-item__title {
+            overflow: hidden;
+        }
+    }
     &__show {
         height: 65px;
         display: flex;
@@ -92,7 +97,7 @@
     }
     &__hidden {
         position: absolute;
-        z-index: 5;
+        z-index: 3;
         min-height: 100%;
         border: 1px solid #E6EAED;
         border-radius: 10px;
@@ -105,15 +110,26 @@
     }
     &__title {
         width: 100%;
-        overflow: hidden;
+        // overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+        display: flex;
+        align-items: center;
+        &-icon {
+            margin-left: 11px;
+            &::before {
+                height: 59px;
+                z-index: 10;
+                left: -55px !important;
+                transform: unset !important;
+            }
+        }
     }
     &__variants {
         padding-bottom: 30px;
         max-height: 385px;
         overflow-y: auto;
-        @include scroll;
+        @include scroll2;
         padding-right: 7px;
         display: none;
     }
@@ -214,11 +230,14 @@
         }
         &__type {
             margin: 0 60px 0 0;
+            &:last-child {
+                margin-right: 0 !important;
+            }
         }
     }
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1439px) {
     .config-filter {
         margin-top: 50px;
         position: relative;
@@ -360,7 +379,7 @@
             margin-bottom: 25px;
             grid-template-columns: 1fr 1fr;
         }
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 767px) {
             .check,
             .radio {
                 label {
@@ -387,7 +406,7 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .config-filter {
         &__mob {
             margin-top: 30px;
@@ -440,9 +459,10 @@
             padding: 0;
         }
         &__scroll {
-            padding-right: 11px;
+            // padding-right: 11px;
             @include scroll;
             overflow-y: auto;
+            overflow-x: hidden;
             height: calc(100% - 40px);
         }
     }

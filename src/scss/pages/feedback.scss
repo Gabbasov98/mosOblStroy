@@ -101,7 +101,7 @@
     }
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1439px) {
     .feedback {
         &__inner {
             padding: 70px 100px;
@@ -132,7 +132,7 @@
     }
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1279px) {
     .feedback {
         padding: 40px;
         &__inner {
@@ -163,7 +163,7 @@
         .resize-img--active {
             width: 400px;
         }
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 767px) {
             &:nth-child(3n - 2) {
                 .resize-img--active {
                     left: 0;
@@ -216,7 +216,7 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .feedback {
         padding: 30px 15px 25px;
         &__inner {
@@ -286,9 +286,6 @@
         }
     }
     .feedback-card {
-        &__img {
-            position: static;
-        }
         &__title {
             font-size: 13px;
         }

@@ -136,10 +136,14 @@ $(document).ready(function() {
 
     $(".config-filter__mob-btn").click(function() {
         $(".config-filter__wrap").addClass("config-filter__wrap--active")
+        if (window.innerWidth < 767) {
+            $("body").addClass("fixed-body")
+        }
     })
 
     $(".config-filter__close").click(function() {
         $(".config-filter__wrap").removeClass("config-filter__wrap--active")
+        $("body").removeClass("fixed-body")
     })
     $(document).mouseup(function(e) {
         var div = $('.config-filter__wrap--active');

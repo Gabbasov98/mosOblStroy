@@ -22,6 +22,7 @@
         width: 78px;
     }
     &:hover {
+        cursor: pointer;
         .adv-banner__detail {
             opacity: 1;
             pointer-events: unset;
@@ -79,6 +80,16 @@
             padding: 20px 20px 20px 30px;
             border-radius: 8px;
         }
+        &-close {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            &:hover {
+                g {
+                    opacity: 1;
+                }
+            }
+        }
     }
     &__img {
         width: 100px;
@@ -121,7 +132,7 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .adv-banner {
         height: 17px;
         width: 27px;
@@ -149,17 +160,18 @@
 
 @media screen and (max-width: 375px) {
     .adv-banner {
-        height: 16px;
-        width: 27px;
+        height: 17px;
+        width: 28px;
         font-size: 9px;
+        flex-grow: 1;
         &:not(:last-child) {
             margin-right: 8px;
         }
         &--medium {
-            width: 33px;
+            width: 35px;
         }
         &--large {
-            width: 50px;
+            width: 52px;
         }
         &__wrap {
             svg {
@@ -170,7 +182,7 @@
             padding: 0 3px;
         }
         &__detail {
-            text-align: center;
+            // text-align: center;
             &-wrap {
                 display: block;
                 padding: 12px;
@@ -178,7 +190,8 @@
         }
         &__img {
             width: 90px;
-            margin: 0 auto;
+            margin: 0 10px 10px 0;
+            float: left;
         }
         &__title {
             font-size: 14px;

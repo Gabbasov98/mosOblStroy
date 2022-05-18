@@ -74,8 +74,8 @@
     }
 }
 
-@media screen and (max-width: 1440px) {
-    @media screen and (min-width: 1280px) {
+@media screen and (max-width: 1439px) {
+    @media screen and (min-width: 1279px) {
         .modal {
             &__close {
                 right: unset;
@@ -157,7 +157,7 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .modal {
         &-dialog {
             border-radius: 20px;

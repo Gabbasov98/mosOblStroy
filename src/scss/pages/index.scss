@@ -48,9 +48,9 @@
         &-info {
             box-sizing: border-box;
             padding: 0;
-            width: 50px !important;
-            height: 50px;
-            max-width: 50px !important;
+            width: 40px !important;
+            height: 40px;
+            max-width: 40px !important;
             background: #FFFFFF !important;
             box-shadow: 0px 4px 20px -5px rgba(24, 65, 90, 0.2);
             border-radius: 13px !important;
@@ -62,7 +62,7 @@
         &-info {
             position: absolute;
             top: 20px;
-            left: 20px;
+            left: 10px;
             z-index: 3;
         }
         .ymaps-2-1-79-float-button-icon {
@@ -70,7 +70,7 @@
             transform: translateX(-50%);
         }
         .ymaps-2-1-79-zoom {
-            width: 50px;
+            width: 40px;
             &__scale {
                 display: none;
             }
@@ -91,12 +91,12 @@
         }
         .ymaps-2-1-79-controls__control {
             // transform: translateY(-50%);
-            inset: 180px 20px auto auto !important;
+            inset: 188px 10px auto auto !important;
         }
         .ymaps-2-1-79-controls__toolbar {
-            width: 50px;
+            width: 40px;
             height: 524px !important;
-            right: 20px;
+            right: 10px;
             left: unset !important;
             margin-top: 0 !important;
             &_right {
@@ -218,14 +218,20 @@
     &__item {
         background: #EFF5F8;
         border-radius: 15px;
-        padding: 30px 40px;
         color: rgba($blue, .8);
         position: relative;
-        &:hover {
+        transition: all .225s;
+        &--active {
             .adv-banner__detail {
                 opacity: 1;
                 pointer-events: unset;
             }
+        }
+        &:hover {
+            cursor: pointer;
+            z-index: 2;
+            box-shadow: 0px 24px 34px -21px rgba(42, 58, 67, 0.14);
+            transform: translateY(-15px);
         }
         &-icon {
             display: block;
@@ -243,20 +249,27 @@
             font-size: 22px;
             line-height: 150%;
         }
+        &-inner {
+            height: 100%;
+            padding: 30px 40px;
+        }
         .adv-banner {
             &__detail {
-                padding: 0;
-                background-image: none;
+                // padding: 0;
+                // background-image: none;
                 width: 460px;
-                left: 158px;
-                bottom: unset;
-                top: 38px;
-                transform: unset;
+                // left: 158px;
+                bottom: 95%;
+                // top: 38px;
+                // transform: unset;
+                z-index: 5;
+                // opacity: 1;
+                // pointer-events: unset;
                 &-wrap {
                     background: #FFFFFF;
-                    box-shadow: 0px 4px 15px rgba(42, 58, 67, 0.1);
+                    // box-shadow: 0px 4px 15px rgba(42, 58, 67, 0.1);
                     border-radius: 8px;
-                    padding-left: 20px;
+                    // padding-left: 20px;
                 }
             }
             &__img {
@@ -264,16 +277,17 @@
             }
         }
         @media screen and (min-width: 992px) {
-            &:nth-child(3n - 1) {
+            &:nth-child(3n - 2) {
                 .adv-banner__detail {
-                    left: 50%;
-                    transform: translateX(-50%);
+                    left: 0;
+                    transform: unset;
                 }
             }
             &:nth-child(3n) {
                 .adv-banner__detail {
                     left: unset;
-                    right: 158px;
+                    right: 0;
+                    transform: unset;
                 }
             }
         }
@@ -540,13 +554,14 @@
         &-title {
             font-weight: 700;
             font-size: 30px;
-            line-height: 140%;
+            // line-height: 140%;
             margin-right: 30px;
             transform: translateY(5px);
         }
         &-wrap {
             display: flex;
-            align-items: center;
+            align-items: flex-end;
+            padding-bottom: 3px;
         }
         &-item {
             &:not(:last-child) {
@@ -590,8 +605,9 @@
             opacity: 0;
             pointer-events: none;
             width: 177%;
+            transition: all .335s;
         }
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 767px) {
             &:nth-child(5n - 2) {
                 .companies__item-info {
                     left: 50%;
@@ -628,7 +644,7 @@
             margin-right: 15px;
         }
         .form-group__error {
-            @media screen and (min-width: 768px) {
+            @media screen and (min-width: 767px) {
                 position: absolute;
             }
         }
@@ -810,7 +826,7 @@
     }
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1439px) {
     .config {
         padding: 50px 0 70px;
         &__title {
@@ -845,7 +861,9 @@
             gap: 20px;
         }
         &__item {
-            padding: 30px;
+            &-inner {
+                padding: 30px;
+            }
             &-title {
                 font-size: 36px;
             }
@@ -989,7 +1007,7 @@
     }
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1279px) {
     .adv {
         &__inner {
             padding: 40px 390px 20px 0;
@@ -1098,7 +1116,7 @@
                 height: 470px !important;
             }
             .ymaps-2-1-79-controls__control {
-                inset: 165px 20px auto auto!important;
+                inset: 173px 10px auto auto!important;
             }
             .ymaps-2-1-79-controls__bottom {
                 top: 215px !important;
@@ -1127,9 +1145,15 @@
             position: relative;
         }
         &__item {
-            padding: 25px;
-            @media screen and (min-width: 768px) {
+            transform: unset !important;
+            @media screen and (min-width: 767px) {
                 position: static;
+            }
+            &-inner {
+                padding: 25px;
+            }
+            &-content {
+                position: relative;
             }
             &-icon {
                 width: 32px;
@@ -1154,7 +1178,8 @@
             width: 100%;
             left: 0;
             top: unset;
-            bottom: 100%;
+            bottom: unset;
+            transform: unset;
         }
     }
     .adv {
@@ -1234,7 +1259,7 @@
     .companies {
         padding: 35px 0;
         &__inner {
-            padding: 50px;
+            // padding: 50px;
         }
         &__items {
             margin-top: 35px;
@@ -1266,7 +1291,7 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .config {
         padding: 30px 0 50px;
         &__title {
@@ -1344,8 +1369,10 @@
             margin-top: 25px;
         }
         &__item {
-            padding: 11px 15px 14px;
-            display: flex;
+            &-inner {
+                padding: 11px 15px 14px;
+                display: flex;
+            }
             &-icon {
                 width: 28px;
                 height: 28px;
@@ -1569,6 +1596,16 @@
         &__agree {
             font-size: 12px;
             margin-top: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .about-index {
+        &__partners {
+            &-item {
+                flex-grow: 1;
+            }
         }
     }
 }

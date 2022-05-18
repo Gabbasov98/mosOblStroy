@@ -183,6 +183,7 @@ input {
 
 .resize-img {
     position: relative;
+    cursor: pointer;
     &--active {
         width: 340px;
         position: absolute;
@@ -244,7 +245,7 @@ input {
             font-weight: 600;
             font-size: 26px;
             line-height: 130%;
-            transform: translateY(-4px);
+            // transform: translateY(-4px);
             pointer-events: none;
         }
     }
@@ -335,7 +336,7 @@ input {
     }
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1439px) {
     .form-group {
         input {
             height: 57px;
@@ -360,7 +361,7 @@ input {
     }
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1279px) {
     .pagination {
         &__item {
             margin-right: 30px;
@@ -405,7 +406,7 @@ input {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .rect {
         width: 8px;
         height: 8px;
@@ -457,7 +458,7 @@ input {
         &__inner {
             display: flex;
             align-items: center;
-            overflow-x: auto;
+            overflow-x: hidden;
             width: calc(100% + 15px);
             position: relative;
             &:after {
@@ -476,6 +477,7 @@ input {
         }
         &__item {
             white-space: nowrap;
+            font-size: 13px;
         }
     }
 }
@@ -484,6 +486,10 @@ input {
     .form-group {
         input {
             padding: 0 20px;
+        }
+        textarea {
+            padding-left: 20px;
+            padding-right: 20px;
         }
     }
     .resize-img {
